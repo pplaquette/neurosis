@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = CD6410ED0D9E9D1700E5A41C /* Neurosis */;
+		activeTarget = 8D1107260486CEB800E47090 /* Neurosis */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* Neurosis */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = CD6410F70D9E9D1B00E5A41C /* Code sense */;
+		executables = (
+			CD6410ED0D9E9D1700E5A41C /* Neurosis */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					284,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 229375676;
+			PBXWorkspaceStateSaveDate = 229375676;
+		};
+		sourceControlManager = CD6410F60D9E9D1B00E5A41C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* Neurosis */ = {
+		activeExec = 0;
+		executables = (
+			CD6410ED0D9E9D1700E5A41C /* Neurosis */,
+		);
+	};
+	CD29BE390DA5B2F200AB9913 /* NSArray_Extensions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {558, 1288}}";
+			sepNavSelRange = "{3941, 39}";
+			sepNavVisRange = "{3656, 441}";
+			sepNavWindowFrame = "{{130, 54}, {879, 714}}";
+		};
+	};
+	CD29BE3A0DA5B2F200AB9913 /* NSArray_Extensions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 770}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{534, 2426}";
+			sepNavWindowFrame = "{{107, 75}, {879, 714}}";
+		};
+	};
+	CD29BE890DA5C96000AB9913 /* PBGSeparatorCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRange = "{0, 233}";
+			sepNavWindowFrame = "{{61, 117}, {879, 714}}";
+		};
+	};
+	CD29BE8A0DA5C96000AB9913 /* PBGSeparatorCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 586}}";
+			sepNavSelRange = "{973, 0}";
+			sepNavVisRange = "{0, 980}";
+			sepNavWindowFrame = "{{84, 96}, {879, 714}}";
+		};
+	};
+	CD29BFE00DA800B200AB9913 /* CameraController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{290, 0}";
+			sepNavVisRange = "{0, 762}";
+			sepNavWindowFrame = "{{153, 33}, {879, 714}}";
+		};
+	};
+	CD29BFE10DA800B200AB9913 /* CameraController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1212, 2282}}";
+			sepNavSelRange = "{4065, 0}";
+			sepNavVisRange = "{358, 1441}";
+			sepNavWindowFrame = "{{236, 17}, {879, 714}}";
+		};
+	};
+	CD29BFF60DA8018200AB9913 /* PBGANNImageProcessor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{398, 0}";
+			sepNavVisRange = "{0, 664}";
+			sepNavWindowFrame = "{{84, 96}, {879, 714}}";
+		};
+	};
+	CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {811, 2254}}";
+			sepNavSelRange = "{4715, 5}";
+			sepNavVisRange = "{4237, 483}";
+			sepNavWindowFrame = "{{61, 117}, {879, 714}}";
+		};
+	};
+	CD29C0110DA82D1A00AB9913 /* LessonController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{258, 0}";
+			sepNavVisRange = "{0, 268}";
+			sepNavWindowFrame = "{{137, 109}, {879, 714}}";
+		};
+	};
+	CD29C0120DA82D1A00AB9913 /* LessonController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{7, 0}";
+			sepNavVisRange = "{0, 221}";
+			sepNavWindowFrame = "{{84, 96}, {879, 714}}";
+		};
+	};
+	CD29C0160DA82D2C00AB9913 /* PBGLesson.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{9, 0}";
+			sepNavVisRange = "{0, 370}";
+			sepNavWindowFrame = "{{38, 138}, {879, 714}}";
+		};
+	};
+	CD29C0170DA82D2C00AB9913 /* PBGLesson.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 224}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 237}";
+			sepNavWindowFrame = "{{194, 92}, {879, 714}}";
+		};
+	};
+	CD6410ED0D9E9D1700E5A41C /* Neurosis */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Neurosis;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	CD6410F60D9E9D1B00E5A41C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	CD6410F70D9E9D1B00E5A41C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	CD8E07090DA4804C0086C2FC /* PBGImageAndTextCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{9, 0}";
+			sepNavVisRange = "{0, 403}";
+			sepNavWindowFrame = "{{130, 54}, {879, 714}}";
+		};
+	};
+	CD8E070A0DA4804C0086C2FC /* PBGImageAndTextCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 2786}}";
+			sepNavSelRange = "{9, 0}";
+			sepNavVisRange = "{246, 865}";
+			sepNavWindowFrame = "{{153, 33}, {879, 714}}";
+		};
+	};
+	CD8E07210DA484E30086C2FC /* PBGSourceObject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{10, 0}";
+			sepNavVisRange = "{0, 478}";
+			sepNavWindowFrame = "{{309, 20}, {879, 714}}";
+		};
+	};
+	CD8E07220DA484E30086C2FC /* PBGSourceObject.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{374, 0}";
+			sepNavVisRange = "{0, 397}";
+			sepNavWindowFrame = "{{15, 159}, {879, 714}}";
+		};
+	};
+	CD8E07450DA5A99A0086C2FC /* PBGTreeNode.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 1022}}";
+			sepNavSelRange = "{1335, 0}";
+			sepNavVisRange = "{0, 716}";
+			sepNavWindowFrame = "{{107, 75}, {879, 714}}";
+		};
+	};
+	CD8E07460DA5A99A0086C2FC /* PBGTreeNode.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {708, 6412}}";
+			sepNavSelRange = "{10793, 38}";
+			sepNavVisRange = "{10617, 400}";
+			sepNavWindowFrame = "{{133, 81}, {879, 714}}";
+		};
+	};
+	CDBD70DB0DAB13E000653ACC /* PBGDefines.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{10, 0}";
+			sepNavVisRange = "{0, 324}";
+			sepNavWindowFrame = "{{576, 135}, {879, 714}}";
+		};
+	};
+	CDBD71210DABF35400653ACC /* PBGNeuron.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {811, 1596}}";
+			sepNavSelRange = "{1224, 5}";
+			sepNavVisRange = "{1099, 449}";
+		};
+	};
+	CDBD71230DABF35500653ACC /* PBGNeuralNetwork.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 748}";
+			sepNavWindowFrame = "{{130, 54}, {879, 714}}";
+		};
+	};
+	CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {948, 3038}}";
+			sepNavSelRange = "{3727, 55}";
+			sepNavVisRange = "{6554, 549}";
+		};
+	};
+	CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 700}}";
+			sepNavSelRange = "{1044, 0}";
+			sepNavVisRange = "{153, 897}";
+			sepNavWindowFrame = "{{404, 111}, {879, 714}}";
+		};
+	};
+	CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {811, 7252}}";
+			sepNavSelRange = "{3353, 0}";
+			sepNavVisRange = "{2974, 725}";
+			sepNavWindowFrame = "{{372, 40}, {879, 714}}";
+		};
+	};
+}
