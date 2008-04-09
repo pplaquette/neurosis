@@ -21,9 +21,12 @@ enum PBGActivationFunction	{
 	int							neuronID;
 
 	NSMutableArray				*inputConnectionsArray;
+	NSMutableArray				*outputConnectionsArray;
+	
 	int							value;
 	BOOL						valueWasExplicitlySet; // Used in order to create "Dummy" Neurons for the input layer.
 	double						threshold;
+	
 	enum PBGActivationFunction	activationFunction;
 }
 

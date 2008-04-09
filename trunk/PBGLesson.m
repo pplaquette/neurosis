@@ -10,6 +10,32 @@
 
 
 @implementation PBGLesson
-@synthesize image, imageAsArray, meaning;
+
+- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m
+{
+	self = [super init];
+	if (self != nil) {
+		imagePath = [ip retain];
+		meaning = [m retain];
+	}
+	return self;
+}
+
+- (NSString *)meaning
+{
+	return meaning;	
+}
+
+- (NSString *)imagePath
+{
+	return imagePath;
+}
+
+- (void)dealloc
+{
+	[imagePath release];
+	[meaning release];
+	[super dealloc];
+}
 
 @end

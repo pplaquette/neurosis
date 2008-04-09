@@ -299,7 +299,7 @@
 							<real>218</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>57 276 763 586 0 0 1440 878 </string>
+						<string>67 266 763 586 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -336,7 +336,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {523, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>57 276 763 586 0 0 1440 878 </string>
+								<string>67 266 763 586 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -358,7 +358,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {523, 540}}</string>
 								<key>RubberWindowFrame</key>
-								<string>57 276 763 586 0 0 1440 878 </string>
+								<string>67 266 763 586 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -382,9 +382,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CDBD71790DABFEBE00653ACC</string>
+				<string>CDBD71800DABFF5500653ACC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CDBD717A0DABFEBE00653ACC</string>
+				<string>CDBD71810DABFF5500653ACC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -518,10 +518,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/patrick/Desktop/Active/Neurosis/Neurosis.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>CDF6B3FF0DA2BB27009F28C4</string>
+		<string>/Users/patrick/Desktop/neurosis/Neurosis.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>57 276 763 586 0 0 1440 878 </string>
+	<string>67 266 763 586 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -559,8 +562,6 @@
 							<string>399pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -600,7 +601,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CDF6B3FF0DA2BB27009F28C4</string>
-				<string>CDBD70E90DAB227300653ACC</string>
+				<string>CDBD718E0DAC132900653ACC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -720,13 +721,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>CDBD70EA0DAB227300653ACC</string>
+				<string>CDBD718F0DAC132900653ACC</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CDBD70EB0DAB227300653ACC</string>
-				<string>CDBD70EC0DAB227300653ACC</string>
-				<string>CDBD70ED0DAB227300653ACC</string>
-				<string>CDBD70EE0DAB227300653ACC</string>
-				<string>CDBD70EF0DAB227300653ACC</string>
+				<string>CDBD71900DAC132900653ACC</string>
+				<string>CDBD71910DAC132900653ACC</string>
+				<string>CDBD71920DAC132900653ACC</string>
+				<string>CDBD71930DAC132900653ACC</string>
+				<string>CDBD71940DAC132900653ACC</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -882,7 +883,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>CDBD70F00DAB227300653ACC</string>
+				<string>CDBD71950DAC132900653ACC</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
