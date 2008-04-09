@@ -11,42 +11,34 @@
 
 @implementation PBGTreeNode
 
-- (id)init
+- (id)initWithNodeType:(PBGTreeNodeType)type nodeTitle:(NSString *)title andNodeIcon:(NSImage *)icon;
 {
 	if (self = [super init])
 	{
-		nodeTitle = [[NSString alloc] initWithString:@""];
-		description = [[NSString alloc] initWithString:@"- empty description -"];
-		text = [[NSTextStorage alloc] init];
-		[self setNodeTitle:@"BaseNode Untitled"];
+		nodeTitle = [title retain];
+		nodeType = type;
+		if (icon) { nodeIcon = [icon retain]; }
+		isLeaf = YES;
+		
 		[self setChildren:[NSArray array]];
-		[self setLeaf:NO];			// container by default
 	}
 	return self;
 }
 
-- (id)initLeaf
-{
-	if (self = [self init])
-	{
-		[self setLeaf:YES];
-	}
-	return self;
-}
 
-- (void)setNodeTitle:(NSString*)newNodeTitle
+- (void)setNodeTitle:(NSString *)newNodeTitle
 {
 	[newNodeTitle retain];
 	[nodeTitle release];
 	nodeTitle = newNodeTitle;
 }
 
-- (NSString*)nodeTitle
+- (NSString *)nodeTitle
 {
 	return nodeTitle;
 }
 
-- (void)setNodeIcon:(NSImage*)icon
+- (void)setNodeIcon:(NSImage *)icon
 {
     if (!nodeIcon || ![nodeIcon isEqual:icon])
 	{
@@ -55,287 +47,67 @@
     }
 }
 
-- (NSImage*)nodeIcon
+- (NSImage *)nodeIcon
 {
     return nodeIcon;
 }
 
-- (void)setChildren:(NSArray*)newChildren
+- (void)setNodeType:(PBGTreeNodeType)newNodeType
+{
+	nodeType = newNodeType;
+}
+
+- (PBGTreeNodeType)nodeType
+{
+	return nodeType;
+}
+
+- (void)setLesson:(PBGLesson *)newLesson
+{
+	[newLesson retain];
+	[lesson release];
+	lesson = newLesson;
+}
+
+- (PBGLesson *)lesson
+{
+	return lesson;
+}
+
+- (void)setChildren:(NSArray *)newChildren
 {
 	if (children != newChildren)
     {
         [children autorelease];
         children = [[NSMutableArray alloc] initWithArray:newChildren];
+		if ([children count] > 0)
+			isLeaf = NO;
     }
 }
 
-- (NSMutableArray*)children
+- (NSMutableArray *)children
 {
 	return children;
 }
 
-- (void)setLeaf:(BOOL)flag
-{
-	isLeaf = flag;
-	if (isLeaf)
-		[self setChildren:[NSArray arrayWithObject:self]];
-	else
-		[self setChildren:[NSArray array]];
-}
-
-- (BOOL)isLeaf
-{
-	return isLeaf;
-}
-
-- (void)setURL:(NSString*)urlStr
-{ 
-    if (!urlString || ![urlString isEqualToString:urlStr])
-	{
-		[urlString release]; 
-		urlString = [urlStr retain]; 
-    }
-}
-
-- (NSString*)urlString
-{ 
-    return urlString; 
-}
-
-- (NSComparisonResult)compare:(PBGTreeNode*)aNode
+- (NSComparisonResult)compare:(PBGTreeNode *)aNode
 {
 	return [[[self nodeTitle] lowercaseString] compare:[[aNode nodeTitle] lowercaseString]];
 }
 
-
-#pragma mark - Drag and Drop
-
-- (BOOL)isDraggable
+- (void)addChild:(PBGTreeNode *)n
 {
-	BOOL result = YES;
-	if ([[self urlString] isAbsolutePath] || [self nodeIcon] == nil)
-		result = NO;	// don't allow file system objects to be dragged or special group nodes
-	return result;
+    [children addObject:n];
+	isLeaf = NO;
 }
 
-// -------------------------------------------------------------------------------
-//	removeObjectFromChildren:obj
-//
-//	Finds the receiver's parent from the nodes contained in the array.
-// -------------------------------------------------------------------------------
-- (id)parentFromArray:(NSArray*)array
+- (PBGTreeNode *)childAtIndex:(int)i
 {
-	id result = nil;
-	
-	for (id node in array)
-	{
-		if (node == self)	// If we are in the root array, return nil
-			break;
-		
-		if ([[node children] containsObjectIdenticalTo:self])
-		{
-			result = node;
-			break;
-		}
-		
-		if (![node isLeaf])
-		{
-			id innerNode = [self parentFromArray:[node children]];
-			if (innerNode)
-			{
-				result = innerNode;
-				break;
-			}
-		}
-	}
-	
-	return result;
+    return [children objectAtIndex:i];
 }
-
-// -------------------------------------------------------------------------------
-//	removeObjectFromChildren:obj
-//
-//	Recursive method which searches children and children of all sub-nodes
-//	to remove the given object.
-// -------------------------------------------------------------------------------
-- (void)removeObjectFromChildren:(id)obj
-{
-	// Remove object from children or the children of any sub-nodes
-	NSEnumerator *enumerator = [children objectEnumerator];
-	id node = nil;
-	
-	while (node = [enumerator nextObject])
-	{
-		if (node == obj)
-		{
-			[children removeObjectIdenticalTo:obj];
-			return;
-		}
-		
-		if (![node isLeaf])
-			[node removeObjectFromChildren:obj];
-	}
-}
-
-// -------------------------------------------------------------------------------
-//	descendants:
-//
-//	Generates an array of all descendants.
-// -------------------------------------------------------------------------------
-- (NSArray*)descendants
-{
-	NSMutableArray	*descendants = [NSMutableArray array];
-	NSEnumerator	*enumerator = [children objectEnumerator];
-	id				node = nil;
-	
-	while (node = [enumerator nextObject])
-	{
-		[descendants addObject:node];
-		
-		if (![node isLeaf])
-			[descendants addObjectsFromArray:[node descendants]];	// Recursive - will go down the chain to get all
-	}
-	return descendants;
-}
-
-// -------------------------------------------------------------------------------
-//	allChildLeafs:
-//
-//	Generates an array of all leafs in children and children of all sub-nodes.
-//	Useful for generating a list of leaf-only nodes.
-// -------------------------------------------------------------------------------
-- (NSArray*)allChildLeafs
-{
-	NSMutableArray	*childLeafs = [NSMutableArray array];
-	NSEnumerator	*enumerator = [children objectEnumerator];
-	id				node = nil;
-	
-	while (node = [enumerator nextObject])
-	{
-		if ([node isLeaf])
-			[childLeafs addObject:node];
-		else
-			[childLeafs addObjectsFromArray:[node allChildLeafs]];	// Recursive - will go down the chain to get all
-	}
-	return childLeafs;
-}
-
-// -------------------------------------------------------------------------------
-//	groupChildren:
-//
-//	Returns only the children that are group nodes.
-// -------------------------------------------------------------------------------
-- (NSArray*)groupChildren
-{
-	NSMutableArray	*groupChildren = [NSMutableArray array];
-	NSEnumerator	*childEnumerator = [children objectEnumerator];
-	PBGTreeNode		*child;
-	
-	while (child = [childEnumerator nextObject])
-	{
-		if (![child isLeaf])
-			[groupChildren addObject:child];
-	}
-	return groupChildren;
-}
-
-// -------------------------------------------------------------------------------
-//	isDescendantOfOrOneOfNodes:nodes
-//
-//	Returns YES if self is contained anywhere inside the children or children of
-//	sub-nodes of the nodes contained inside the given array.
-// -------------------------------------------------------------------------------
-- (BOOL)isDescendantOfOrOneOfNodes:(NSArray*)nodes
-{
-    // returns YES if we are contained anywhere inside the array passed in, including inside sub-nodes
-    NSEnumerator *enumerator = [nodes objectEnumerator];
-	id node = nil;
-	
-    while (node = [enumerator nextObject])
-	{
-		if (node == self)
-			return YES;		// we found ourselv
-		
-		// check all the sub-nodes
-		if (![node isLeaf])
-		{
-			if ([self isDescendantOfOrOneOfNodes:[node children]])
-				return YES;
-		}
-    }
-	
-    return NO;
-}
-
-// -------------------------------------------------------------------------------
-//	isDescendantOfNodes:nodes
-//
-//	Returns YES if any node in the array passed in is an ancestor of ours.
-// -------------------------------------------------------------------------------
-- (BOOL)isDescendantOfNodes:(NSArray*)nodes
-{
-    NSEnumerator *enumerator = [nodes objectEnumerator];
-	id node = nil;
-	
-    while (node = [enumerator nextObject])
-	{
-		// check all the sub-nodes
-		if (![node isLeaf])
-		{
-			if ([self isDescendantOfOrOneOfNodes:[node children]])
-				return YES;
-		}
-    }
-	
-	return NO;
-}
-
-// -------------------------------------------------------------------------------
-//	indexPathInArray:array
-//
-//	Returns the index path of within the given array,
-//	useful for drag and drop.
-// -------------------------------------------------------------------------------
-- (NSIndexPath*)indexPathInArray:(NSArray*)array
-{
-	NSIndexPath		*indexPath = nil;
-	NSMutableArray	*reverseIndexes = [NSMutableArray array];
-	id				parent, doc = self;
-	NSInteger		index;
-	
-	while (parent = [doc parentFromArray:array])
-	{
-		index = [[parent children] indexOfObjectIdenticalTo:doc];
-		if (index == NSNotFound)
-			return nil;
-		
-		[reverseIndexes addObject:[NSNumber numberWithInt:index]];
-		doc = parent;
-	}
-	
-	// If parent is nil, we should just be in the parent array
-	index = [array indexOfObjectIdenticalTo:doc];
-	if (index == NSNotFound)
-		return nil;
-	[reverseIndexes addObject:[NSNumber numberWithInt:index]];
-	
-	// Now build the index path
-	NSEnumerator *re = [reverseIndexes reverseObjectEnumerator];
-	NSNumber *indexNumber;
-	while (indexNumber = [re nextObject])
-	{
-		if (indexPath == nil)
-			indexPath = [NSIndexPath indexPathWithIndex:[indexNumber intValue]];
-		else
-			indexPath = [indexPath indexPathByAddingIndex:[indexNumber intValue]];
-	}
-	
-	return indexPath;
-}
-
 
 #pragma mark - Archiving And Copying Support
-
+/*
 // -------------------------------------------------------------------------------
 //	mutableKeys:
 //
@@ -345,12 +117,9 @@
 {
 	return [NSArray arrayWithObjects:
 			@"nodeTitle",
-			@"isLeaf",		// isLeaf MUST come before children for initWithDictionary: to work
 			@"children", 
 			@"nodeIcon",
-			@"urlString",
-			@"description", 
-			@"text",
+			@"nodeType"
 			nil];
 }
 
@@ -460,39 +229,18 @@
 		[super setNilValueForKey:key];
 }
 
+*/
 
-- (void)setDescription:(NSString*)newDescription
+- (BOOL)isLeaf
 {
-	[newDescription retain];
-	[description release];
-	description = newDescription;
-}
-
-
-- (NSString*)description
-{
-	return description;
-}
-
-- (void)setText:(id)newText
-{
-	if ([newText isKindOfClass:[NSAttributedString class]])
-		[text replaceCharactersInRange:NSMakeRange(0, [text length]) withAttributedString:newText];
-	else
-		[text replaceCharactersInRange:NSMakeRange(0, [text length]) withString:newText];
-}
-
-- (NSTextStorage*)text
-{
-	return text;
+	return isLeaf;
 }
 
 - (void)dealloc
 {
 	[nodeTitle release];
+	[nodeIcon release];
 	[children release];
-	[description release];
-	[text release];
 	[super dealloc];
 }
 

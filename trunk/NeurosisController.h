@@ -11,7 +11,7 @@
 #import "CameraController.h"
 #import "LessonController.h"
 
-#import "PBGSourceObject.h"
+#import "PBGTreeNode.h"
 #import "PBGSeparatorCell.h"
 
 @interface NeurosisController : NSObject {
@@ -33,7 +33,7 @@
 
 	NSMutableArray				*contents;
 	
-	PBGSeparatorCell				*separatorCell;
+	PBGSeparatorCell			*separatorCell;
 	
 	NSImage						*cameraIconImage;
 	NSImage						*photoIconImage;
@@ -42,8 +42,12 @@
 - (void)setContents:(NSArray*)newContents;
 - (NSMutableArray*)contents;
 
-- (void)addElement:(PBGSourceObject *)treeAddition;
-- (void)addFolder:(PBGSourceObject *)treeAddition;
+- (void)addNode:(PBGTreeNode *)newNode;
+
+- (void)addElement:(PBGTreeNode *)treeAddition;
+- (void)addFolder:(PBGTreeNode *)treeAddition;
+
+- (BOOL)isSpecialGroup:(PBGTreeNode *)groupNode;
 
 - (int)containsExistingLessonOf:(NSString *)thing;
 @end

@@ -7,6 +7,17 @@
  *
  */
 
+// Notifications
 #define kPictureTakenNotification	@"PBGPictureTakenNotification"
-#define kLessonOfIdentifier			@"PBGLessonOfIdentifier"
+#define kMeaningIdentifier			@"PBGMeaningIdentifier"
 #define kFilePathIdentifier			@"PBGFilePathIdentifier"
+
+// PBGTreeNode Types
+typedef enum _PBGTreeNodeType {
+	SpecialFolderTreeNode = 0,
+	CameraItemTreeNode = 1,
+	LessonFolderTreeNode = 2,
+	LessonTreeNode = 3
+} PBGTreeNodeType;
+
+
