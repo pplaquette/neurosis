@@ -135,7 +135,7 @@
 	
 	// Create a dictionary with the info we need
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
-	[dict setObject:originalFileName forKey:kLessonOfIdentifier];
+	[dict setObject:originalFileName forKey:kMeaningIdentifier];
 	[dict setObject:fullFilePath forKey:kFilePathIdentifier];
 	
 	// Make our notification here.

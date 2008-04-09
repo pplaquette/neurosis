@@ -11,7 +11,6 @@
 #import "PBGDefines.h"
 
 #import "PBGImageAndTextCell.h"
-#import "PBGSourceObject.h"
 #import "PBGTreeNode.h"
 #import "PBGLesson.h"
 
@@ -64,18 +63,24 @@
     [separatorCell setEditable:NO];
 	
 	// Create a child for the camera item and add it to the source list.
-	PBGSourceObject *inputs = [[PBGSourceObject alloc] initWithURL:nil withName:kInputsFolderIdentifier];
+	PBGTreeNode *inputs = [[PBGTreeNode alloc] initWithNodeType:SpecialFolderTreeNode
+													  nodeTitle:kInputsFolderIdentifier
+													andNodeIcon:nil];
 	[self addFolder:inputs];
 	[inputs release];
 	
-	PBGSourceObject *camera = [[PBGSourceObject alloc] initWithURL:nil withName:kCameraIdentifier];
+	PBGTreeNode *camera = [[PBGTreeNode alloc] initWithNodeType:CameraItemTreeNode 
+													  nodeTitle:kCameraIdentifier 
+													andNodeIcon:cameraIconImage];
 	[self addElement:camera];
 	[camera release];
 
 	NSArray *selection = [treeController selectionIndexPaths];
 	[treeController removeSelectionIndexPaths:selection];
 	
-	PBGSourceObject *education = [[PBGSourceObject alloc] initWithURL:nil withName:kEducationFolderIdentifier];
+	PBGTreeNode *education = [[PBGTreeNode alloc] initWithNodeType:SpecialFolderTreeNode
+														 nodeTitle:kEducationFolderIdentifier
+													   andNodeIcon:nil];
 	[self addFolder:education];
 	[education release];
 	
@@ -105,19 +110,38 @@
 	
 	// Search for an existing folder with our lesson name
 	NSLog(@"Contents: %@", [[contents objectAtIndex:1] children]);	
-	int index = [self containsExistingLessonOf:[[notification object] valueForKey:kLessonOfIdentifier]];
+	int index = [self containsExistingLessonOf:[[notification object] valueForKey:kMeaningIdentifier]];
 	
-	if (index < 0) { // Create a new lesson and tree node
-		PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
-															meaning:[[notification object] valueForKey:kLessonOfIdentifier]];
-		PBGTreeNode *newNode = [[PBGTreeNode alloc] init];
-		[newNode setNodeTitle:[[notification object] valueForKey:kLessonOfIdentifier]];
+	// Create our new lesson
+	PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
+														meaning:[[notification object] valueForKey:kMeaningIdentifier]];
+	
+	if (index < 0) { // Create a new tree folder
+		PBGTreeNode *folderNode = [[PBGTreeNode alloc] initWithNodeType:LessonFolderTreeNode
+														   nodeTitle:kMeaningIdentifier
+														 andNodeIcon:photoIconImage];
+				
 		
-		PBGSourceObject *newTreeObj = [[PBGSourceObject alloc] initWithURL:nil withName:[[notification object] valueForKey:kLessonOfIdentifier]];
+		// Add our new folder to the tree
+		[treeController setSelectionIndexPath:[NSIndexPath indexPathWithIndex:1]];
+		[treeController addChild:folderNode];
 		
-		// Add our new node to the tree? 
-		//[[contents objectAtIndex:1] setChildren:[NSArray arrayWithObject:newNode]];
-		[self addFolder:newTreeObj];
+		// Create a new tree node and add that to the folder we just created
+		PBGTreeNode *lessonNode = [[PBGTreeNode alloc] initWithNodeType:LessonTreeNode
+														   nodeTitle:kMeaningIdentifier
+														 andNodeIcon:photoIconImage];
+		[lessonNode setLesson:newLesson];
+		//[folderNode addChild:lessonNode];
+		
+		NSUInteger indexes[2];
+		indexes[0] = 1;
+		indexes[1] = [[contents objectAtIndex:1] indexOfObject:folderNode];
+		NSIndexPath *newFolderSelection = [NSIndexPath indexPathWithIndexes:indexes length:2];
+		[treeController setSelectionIndexPath:newFolderSelection];
+		[treeController addChild:lessonNode];
+		
+		//[self addElement:newNode];
+		
 	} else { // Add to an existing lesson
 		
 		
@@ -167,7 +191,42 @@
 }
 
 
-- (void)addFolder:(PBGSourceObject *)treeAddition
+- (void)addNode:(PBGTreeNode *)newNode
+{
+	// Switch on the node type
+	PBGTreeNodeType newNodeType = [newNode nodeType];
+	switch(newNodeType) {
+		case SpecialFolderTreeNode:
+			
+			
+			
+			break;
+		
+		case CameraItemTreeNode:
+			
+			
+			
+			break;
+			
+		case LessonFolderTreeNode:
+			
+			
+			
+			break;
+			
+		case LessonTreeNode:
+			NSLog(@"Woot.");
+			
+			
+			break;
+			
+		default:
+			NSLog(@"Unknown nodeType passed to addNode:");
+	}
+	
+}
+
+- (void)addFolder:(PBGTreeNode *)treeAddition
 {
 	// NSTreeController inserts objects using NSIndexPath, so we need to calculate this
 	NSIndexPath *indexPath = nil;
@@ -196,26 +255,22 @@
 		}
 	}
 	
-	PBGTreeNode *node = [[PBGTreeNode alloc] init];
-	[node setNodeTitle:[treeAddition nodeName]];
-	
 	// the user is adding a child node, tell the controller directly
-	[treeController insertObject:node atArrangedObjectIndexPath:indexPath];
+	[treeController insertObject:treeAddition atArrangedObjectIndexPath:indexPath];
 	
-	[node release];
 }
 
 
-- (void)addElement:(PBGSourceObject *)treeAddition
+- (void)addElement:(PBGTreeNode *)treeAddition
 {
 	if ([[treeController selectedObjects] count] > 0)
 	{
-		// we have a selection
-		if ([[[treeController selectedObjects] objectAtIndex:0] isLeaf])
+		/* we have a selection
+		//if ([[[treeController selectedObjects] objectAtIndex:0] isLeaf])
 		{
 			// trying to add a child to a selected leaf node, so select its parent for add
 			[self selectParentFromSelection];
-		}
+		} */
 	}
 	
 	// find the selection to insert our node
@@ -232,34 +287,13 @@
 		indexPath = [NSIndexPath indexPathWithIndex:[contents count]];
 	}
 	
-	// create a leaf node
-	PBGTreeNode *node = [[PBGTreeNode alloc] initLeaf];
-	[node setURL:[treeAddition nodeURL]];
-	[node setNodeTitle:[treeAddition nodeName]];
-	
-	if ([treeAddition nodeURL] && [[treeAddition nodeURL] length] > 0)
-	{
-		// the child to insert has a valid URL, use its display name as the node title
-		if ([treeAddition nodeName])
-			[node setNodeTitle:[treeAddition nodeName]];
-		else
-			[node setNodeTitle:[[NSFileManager defaultManager] displayNameAtPath:[node urlString]]];
-	}
 	
 	// the user is adding a child node, tell the controller directly
-	[treeController insertObject:node atArrangedObjectIndexPath:indexPath];
-	
-	[node release];
-	
+	[treeController insertObject:treeAddition atArrangedObjectIndexPath:indexPath];
+		
 	// adding a child automatically becomes selected by NSOutlineView, so keep its parent selected
 	//if ([treeAddition selectItsParent])
 	//	[self selectParentFromSelection];
-}
-
-- (BOOL)isSpecialGroup:(PBGTreeNode *)groupNode
-{ 
-	return ([groupNode nodeIcon] == nil && ([[groupNode nodeTitle] isEqualToString:kInputsFolderIdentifier] || 
-			[[groupNode nodeTitle] isEqualToString:kEducationFolderIdentifier]));
 }
 
 #pragma mark - Application Delegate
@@ -377,70 +411,15 @@
 	{
 		result = NO; // don't allow special group nodes to be renamed
 	}
-	else
-	{
-		if ([[item urlString] isAbsolutePath])
-			result = NO;	// don't allow file system objects to be renamed
-	}
 	
 	return result;
 }
 
 - (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell*)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
-	if ([[tableColumn identifier] isEqualToString:kSourcesColumnIdentifier])
-	{
-		// we are displaying the single and only column
-		if ([cell isKindOfClass:[PBGImageAndTextCell class]])
-		{
-			item = [item representedObject];
-			if (item)
-			{
-				if ([item isLeaf])
-				{
-					// does it have a URL string or a name?
-					NSString *urlStr = [item urlString];
-					NSString *name = [item nodeTitle];
-					
-					if (name == kCameraIdentifier){
-						[item setNodeIcon:cameraIconImage];
-					}
-					
-					if (urlStr || name)
-					{
-						if ([item isLeaf])
-						{
-							//NSImage *iconImage;
-							//iconImage = cameraIconImage;
-							//[item setNodeIcon:iconImage];
-						}
-						else
-						{
-							NSImage* iconImage = [[NSWorkspace sharedWorkspace] iconForFile:urlStr];
-							[item setNodeIcon:iconImage];
-						}
-					}
-					else
-					{
-						// it's a separator, don't bother with the icon
-					}
-				}
-				else
-				{
-					// check if it's a special folder (DEVICES or PLACES), we don't want it to have an icon
-					if ([self isSpecialGroup:item])
-					{
-						[item setNodeIcon:nil];
-					}
-					else
-					{
-						// it's a folder, use the folderImage as its icon
-						[item setNodeIcon:cameraIconImage];
-					}
-				}
-			}
-			
-			// set the cell's image
+	if ([[tableColumn identifier] isEqualToString:kSourcesColumnIdentifier] && [cell isKindOfClass:[PBGImageAndTextCell class]]) {
+		item = [item representedObject];
+		if (item) {
 			[(PBGImageAndTextCell*)cell setImage:[item nodeIcon]];
 		}
 	}
@@ -515,6 +494,12 @@
 	{
 		return NO;
 	}
+}
+
+- (BOOL)isSpecialGroup:(PBGTreeNode *)groupNode
+{ 
+	return ([groupNode nodeIcon] == nil && ([[groupNode nodeTitle] isEqualToString:kInputsFolderIdentifier] || 
+											[[groupNode nodeTitle] isEqualToString:kEducationFolderIdentifier]));
 }
 
 - (void)dealloc

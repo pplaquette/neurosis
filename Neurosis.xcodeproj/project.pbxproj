@@ -19,7 +19,6 @@
 		CD29C0130DA82D1A00AB9913 /* LessonController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD29C0120DA82D1A00AB9913 /* LessonController.m */; };
 		CD29C0180DA82D2C00AB9913 /* PBGLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = CD29C0170DA82D2C00AB9913 /* PBGLesson.m */; };
 		CD8E070B0DA4804C0086C2FC /* PBGImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8E070A0DA4804C0086C2FC /* PBGImageAndTextCell.m */; };
-		CD8E07230DA484E30086C2FC /* PBGSourceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8E07220DA484E30086C2FC /* PBGSourceObject.m */; };
 		CD8E07470DA5A99A0086C2FC /* PBGTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8E07460DA5A99A0086C2FC /* PBGTreeNode.m */; };
 		CDBD6F560DA9462900653ACC /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBD6F540DA9462900653ACC /* QTKit.framework */; };
 		CDBD6F570DA9462900653ACC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBD6F550DA9462900653ACC /* QuartzCore.framework */; };
@@ -58,8 +57,6 @@
 		CD29C0170DA82D2C00AB9913 /* PBGLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGLesson.m; sourceTree = "<group>"; };
 		CD8E07090DA4804C0086C2FC /* PBGImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGImageAndTextCell.h; sourceTree = "<group>"; };
 		CD8E070A0DA4804C0086C2FC /* PBGImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGImageAndTextCell.m; sourceTree = "<group>"; };
-		CD8E07210DA484E30086C2FC /* PBGSourceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGSourceObject.h; sourceTree = "<group>"; };
-		CD8E07220DA484E30086C2FC /* PBGSourceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGSourceObject.m; sourceTree = "<group>"; };
 		CD8E07450DA5A99A0086C2FC /* PBGTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGTreeNode.h; sourceTree = "<group>"; };
 		CD8E07460DA5A99A0086C2FC /* PBGTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGTreeNode.m; sourceTree = "<group>"; };
 		CDBD6F540DA9462900653ACC /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -106,8 +103,6 @@
 				CD8E07460DA5A99A0086C2FC /* PBGTreeNode.m */,
 				CD29BE390DA5B2F200AB9913 /* NSArray_Extensions.m */,
 				CD29BE3A0DA5B2F200AB9913 /* NSArray_Extensions.h */,
-				CD8E07210DA484E30086C2FC /* PBGSourceObject.h */,
-				CD8E07220DA484E30086C2FC /* PBGSourceObject.m */,
 				CD8E07090DA4804C0086C2FC /* PBGImageAndTextCell.h */,
 				CD8E070A0DA4804C0086C2FC /* PBGImageAndTextCell.m */,
 				CD29BE890DA5C96000AB9913 /* PBGSeparatorCell.h */,
@@ -273,7 +268,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				CDF6B3E40DA2B956009F28C4 /* NeurosisController.m in Sources */,
 				CD8E070B0DA4804C0086C2FC /* PBGImageAndTextCell.m in Sources */,
-				CD8E07230DA484E30086C2FC /* PBGSourceObject.m in Sources */,
 				CD8E07470DA5A99A0086C2FC /* PBGTreeNode.m in Sources */,
 				CD29BE3B0DA5B2F200AB9913 /* NSArray_Extensions.m in Sources */,
 				CD29BE8B0DA5C96000AB9913 /* PBGSeparatorCell.m in Sources */,
