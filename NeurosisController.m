@@ -13,6 +13,7 @@
 #import "PBGImageAndTextCell.h"
 #import "PBGSourceObject.h"
 #import "PBGTreeNode.h"
+#import "PBGLesson.h"
 
 
 #define kMinOutlineViewSplit		125.0f
@@ -104,19 +105,25 @@
 	
 	// Search for an existing folder with our lesson name
 	NSLog(@"Contents: %@", [[contents objectAtIndex:1] children]);	
-	int index = [self containsExistingLessonOf:[notification valueForKey:kLessonOfIdentifier]];
+	int index = [self containsExistingLessonOf:[[notification object] valueForKey:kLessonOfIdentifier]];
 	
-	if (index < 0) { // Create a new lesson
+	if (index < 0) { // Create a new lesson and tree node
+		PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
+															meaning:[[notification object] valueForKey:kLessonOfIdentifier]];
+		PBGTreeNode *newNode = [[PBGTreeNode alloc] init];
+		[newNode setNodeTitle:[[notification object] valueForKey:kLessonOfIdentifier]];
 		
+		PBGSourceObject *newTreeObj = [[PBGSourceObject alloc] initWithURL:nil withName:[[notification object] valueForKey:kLessonOfIdentifier]];
 		
+		// Add our new node to the tree? 
+		//[[contents objectAtIndex:1] setChildren:[NSArray arrayWithObject:newNode]];
+		[self addFolder:newTreeObj];
 	} else { // Add to an existing lesson
 		
 		
 	}
 
-	
-	// if none is found then create one, else select the existing one
-	// add a new PGLesson object
+
 }
 
 

@@ -59,8 +59,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 229375676;
-			PBXWorkspaceStateSaveDate = 229375676;
+			PBXPerProjectTemplateStateSaveDate = 229375820;
+			PBXWorkspaceStateSaveDate = 229375820;
+		};
+		perUserProjectItems = {
+			CDBD71960DAC136000653ACC /* PBXTextBookmark */ = CDBD71960DAC136000653ACC /* PBXTextBookmark */;
+			CDBD71970DAC136000653ACC /* PBXTextBookmark */ = CDBD71970DAC136000653ACC /* PBXTextBookmark */;
+			CDBD719A0DAC1B8300653ACC /* PBXTextBookmark */ = CDBD719A0DAC1B8300653ACC /* PBXTextBookmark */;
+			CDBD719B0DAC1B8300653ACC /* PBXTextBookmark */ = CDBD719B0DAC1B8300653ACC /* PBXTextBookmark */;
 		};
 		sourceControlManager = CD6410F60D9E9D1B00E5A41C /* Source Control */;
 		userBuildSettings = {
@@ -107,7 +113,7 @@
 	CD29BFE00DA800B200AB9913 /* CameraController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
-			sepNavSelRange = "{290, 0}";
+			sepNavSelRange = "{174, 0}";
 			sepNavVisRange = "{0, 762}";
 			sepNavWindowFrame = "{{153, 33}, {879, 714}}";
 		};
@@ -115,8 +121,8 @@
 	CD29BFE10DA800B200AB9913 /* CameraController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1212, 2282}}";
-			sepNavSelRange = "{4065, 0}";
-			sepNavVisRange = "{358, 1441}";
+			sepNavSelRange = "{83, 0}";
+			sepNavVisRange = "{0, 1234}";
 			sepNavWindowFrame = "{{236, 17}, {879, 714}}";
 		};
 	};
@@ -131,8 +137,8 @@
 	CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {811, 2254}}";
-			sepNavSelRange = "{4715, 5}";
-			sepNavVisRange = "{4237, 483}";
+			sepNavSelRange = "{1556, 21}";
+			sepNavVisRange = "{1191, 681}";
 			sepNavWindowFrame = "{{61, 117}, {879, 714}}";
 		};
 	};
@@ -175,7 +181,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -201,6 +207,7 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryName = "";
 		};
 	};
 	CD6410F70D9E9D1B00E5A41C /* Code sense */ = {
@@ -285,6 +292,50 @@
 			sepNavVisRange = "{6554, 549}";
 		};
 	};
+	CDBD71260DABF35500653ACC /* PBGNeuron.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 588}}";
+			sepNavSelRange = "{615, 0}";
+			sepNavVisRange = "{0, 931}";
+			sepNavWindowFrame = "{{176, 12}, {879, 714}}";
+		};
+	};
+	CDBD71960DAC136000653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: 'PBGANNImageProcessor' may not respond to '-updateImage'";
+		fRef = CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */;
+		rLen = 1;
+		rLoc = 49;
+		rType = 1;
+	};
+	CDBD71970DAC136000653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */;
+		name = "PBGANNImageProcessor.m: 50";
+		rLen = 21;
+		rLoc = 1556;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 3766;
+	};
+	CDBD719A0DAC1B8300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: 'PBGANNImageProcessor' may not respond to '-updateImage'";
+		fRef = CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */;
+		rLen = 1;
+		rLoc = 49;
+		rType = 1;
+	};
+	CDBD719B0DAC1B8300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */;
+		name = "PBGANNImageProcessor.m: 50";
+		rLen = 21;
+		rLoc = 1556;
+		rType = 0;
+		vrLen = 590;
+		vrLoc = 1191;
+	};
 	CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {820, 700}}";
@@ -295,9 +346,9 @@
 	};
 	CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {811, 7252}}";
-			sepNavSelRange = "{3353, 0}";
-			sepNavVisRange = "{2974, 725}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 7140}}";
+			sepNavSelRange = "{3455, 0}";
+			sepNavVisRange = "{2739, 1263}";
 			sepNavWindowFrame = "{{372, 40}, {879, 714}}";
 		};
 	};

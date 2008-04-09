@@ -27,6 +27,7 @@
 		CDBD71270DABF35500653ACC /* PBGNeuron.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD71210DABF35400653ACC /* PBGNeuron.m */; };
 		CDBD71280DABF35500653ACC /* PBGWeightedConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD71240DABF35500653ACC /* PBGWeightedConnection.m */; };
 		CDBD71290DABF35500653ACC /* PBGNeuralNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */; };
+		CDBD71A90DAC224600653ACC /* Lesson.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBD71A70DAC224600653ACC /* Lesson.xib */; };
 		CDF6B3E40DA2B956009F28C4 /* NeurosisController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		CDBD71240DABF35500653ACC /* PBGWeightedConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGWeightedConnection.m; sourceTree = "<group>"; };
 		CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGNeuralNetwork.m; sourceTree = "<group>"; };
 		CDBD71260DABF35500653ACC /* PBGNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGNeuron.h; sourceTree = "<group>"; };
+		CDBD71A80DAC224600653ACC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Lesson.xib; sourceTree = "<group>"; };
 		CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeurosisController.h; sourceTree = "<group>"; };
 		CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeurosisController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				CDBD6F680DA9482200653ACC /* Camera.xib */,
+				CDBD71A70DAC224600653ACC /* Lesson.xib */,
 			);
 			name = Neurosis;
 			sourceTree = "<group>";
@@ -200,12 +203,12 @@
 		CDBD712B0DABF35C00653ACC /* Neural Network */ = {
 			isa = PBXGroup;
 			children = (
-				CDBD71210DABF35400653ACC /* PBGNeuron.m */,
-				CDBD71220DABF35500653ACC /* PBGWeightedConnection.h */,
-				CDBD71230DABF35500653ACC /* PBGNeuralNetwork.h */,
-				CDBD71240DABF35500653ACC /* PBGWeightedConnection.m */,
-				CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */,
 				CDBD71260DABF35500653ACC /* PBGNeuron.h */,
+				CDBD71210DABF35400653ACC /* PBGNeuron.m */,
+				CDBD71230DABF35500653ACC /* PBGNeuralNetwork.h */,
+				CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */,
+				CDBD71220DABF35500653ACC /* PBGWeightedConnection.h */,
+				CDBD71240DABF35500653ACC /* PBGWeightedConnection.m */,
 			);
 			name = "Neural Network";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				CDBD6F6A0DA9482200653ACC /* Camera.xib in Resources */,
+				CDBD71A90DAC224600653ACC /* Lesson.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +313,14 @@
 				CDBD6F690DA9482200653ACC /* English */,
 			);
 			name = Camera.xib;
+			sourceTree = "<group>";
+		};
+		CDBD71A70DAC224600653ACC /* Lesson.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDBD71A80DAC224600653ACC /* English */,
+			);
+			name = Lesson.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

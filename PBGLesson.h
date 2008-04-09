@@ -11,15 +11,13 @@
 
 @interface PBGLesson : NSObject {
 	
-	NSImage		*image;
-	NSArray		*imageAsArray;
+	NSString		*imagePath;
+	NSArray			*imageAsArray;
 	
-	NSString	*meaning;
+	NSString		*meaning;
 	
 }
 
-@property NSImage *image;
-@property NSArray *imageAsArray;
-@property NSString *meaning;
+- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m;
 
 @end
