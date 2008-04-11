@@ -42,12 +42,14 @@
 - (void)setContents:(NSArray*)newContents;
 - (NSMutableArray*)contents;
 
-- (void)addNode:(PBGTreeNode *)newNode;
+- (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex;
 
 - (void)addElement:(PBGTreeNode *)treeAddition;
 - (void)addFolder:(PBGTreeNode *)treeAddition;
 
 - (BOOL)isSpecialGroup:(PBGTreeNode *)groupNode;
+
+- (void)selectCamera;
 
 - (int)containsExistingLessonOf:(NSString *)thing;
 @end

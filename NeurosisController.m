@@ -66,13 +66,13 @@
 	PBGTreeNode *inputs = [[PBGTreeNode alloc] initWithNodeType:SpecialFolderTreeNode
 													  nodeTitle:kInputsFolderIdentifier
 													andNodeIcon:nil];
-	[self addFolder:inputs];
+	[self addNode:inputs atIndex:nil];
 	[inputs release];
 	
 	PBGTreeNode *camera = [[PBGTreeNode alloc] initWithNodeType:CameraItemTreeNode 
 													  nodeTitle:kCameraIdentifier 
 													andNodeIcon:cameraIconImage];
-	[self addElement:camera];
+	[self addNode:camera atIndex:nil];
 	[camera release];
 
 	NSArray *selection = [treeController selectionIndexPaths];
@@ -81,7 +81,7 @@
 	PBGTreeNode *education = [[PBGTreeNode alloc] initWithNodeType:SpecialFolderTreeNode
 														 nodeTitle:kEducationFolderIdentifier
 													   andNodeIcon:nil];
-	[self addFolder:education];
+	[self addNode:education atIndex:nil];
 	[education release];
 	
 	// Select the camera
@@ -104,9 +104,9 @@
 
 - (void)handleNewPicture:(NSNotification *)notification
 {
-	// Select the Education folder
-	NSIndexPath *educationIndexPath = [NSIndexPath indexPathWithIndex:1];
-	[treeController setSelectionIndexPath:educationIndexPath];
+	
+	NSString *lessonMeaning = [[notification object] valueForKey:kMeaningIdentifier];
+	NSLog(@"Meaning: %@", lessonMeaning);
 	
 	// Search for an existing folder with our lesson name
 	NSLog(@"Contents: %@", [[contents objectAtIndex:1] children]);	
@@ -114,42 +114,36 @@
 	
 	// Create our new lesson
 	PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
-														meaning:[[notification object] valueForKey:kMeaningIdentifier]];
+														meaning:lessonMeaning];
+	
+	PBGTreeNode *lessonNode = [[PBGTreeNode alloc] initWithNodeType:LessonTreeNode
+														  nodeTitle:lessonMeaning
+														andNodeIcon:photoIconImage];
+	[lessonNode setLesson:newLesson];
 	
 	if (index < 0) { // Create a new tree folder
 		PBGTreeNode *folderNode = [[PBGTreeNode alloc] initWithNodeType:LessonFolderTreeNode
-														   nodeTitle:kMeaningIdentifier
+														   nodeTitle:lessonMeaning
 														 andNodeIcon:photoIconImage];
 				
 		
-		// Add our new folder to the tree
-		[treeController setSelectionIndexPath:[NSIndexPath indexPathWithIndex:1]];
-		[treeController addChild:folderNode];
+		// Add our new folder to the tree and our lesson to that folder
+		[self addNode:folderNode atIndex:nil];
 		
-		// Create a new tree node and add that to the folder we just created
-		PBGTreeNode *lessonNode = [[PBGTreeNode alloc] initWithNodeType:LessonTreeNode
-														   nodeTitle:kMeaningIdentifier
-														 andNodeIcon:photoIconImage];
-		[lessonNode setLesson:newLesson];
-		//[folderNode addChild:lessonNode];
+		[lessonNode setNodeTitle:[lessonMeaning stringByAppendingString:@" 1"]];
 		
-		NSUInteger indexes[2];
-		indexes[0] = 1;
-		indexes[1] = [[contents objectAtIndex:1] indexOfObject:folderNode];
-		NSIndexPath *newFolderSelection = [NSIndexPath indexPathWithIndexes:indexes length:2];
-		[treeController setSelectionIndexPath:newFolderSelection];
-		[treeController addChild:lessonNode];
-		
-		//[self addElement:newNode];
+		int foo = [[[contents objectAtIndex:1] children] indexOfObject:folderNode];
+		[self addNode:lessonNode atIndex:[NSNumber numberWithInt:foo]];
 		
 	} else { // Add to an existing lesson
-		
-		
+		NSMutableArray *education = (NSMutableArray *) [[contents objectAtIndex:1] children];
+		int count = [[[education objectAtIndex:index] children] count];
+		[lessonNode setNodeTitle:[lessonMeaning stringByAppendingFormat:@" %d", (count + 1), nil]];
+		[self addNode:lessonNode atIndex:[NSNumber numberWithInt:index]];
 	}
 
 
 }
-
 
 - (int)containsExistingLessonOf:(NSString *)thing
 {
@@ -191,33 +185,54 @@
 }
 
 
-- (void)addNode:(PBGTreeNode *)newNode
+- (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex
 {
+	
 	// Switch on the node type
 	PBGTreeNodeType newNodeType = [newNode nodeType];
 	switch(newNodeType) {
 		case SpecialFolderTreeNode:
 			
-			
+			[treeController insertObject:newNode atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:[contents count]]];
 			
 			break;
 		
 		case CameraItemTreeNode:
 			
-			
+			NSLog(@"Loading camera.");
+			NSIndexPath *ip = [treeController selectionIndexPath];
+			ip = [ip indexPathByAddingIndex:[[[[treeController selectedObjects] objectAtIndex:0] children] count]];
+			NSLog(@"Index: %@", ip);
+			[treeController insertObject:newNode atArrangedObjectIndexPath:ip];
 			
 			break;
 			
 		case LessonFolderTreeNode:
+			NSLog(@"Blah");
 			
+			NSUInteger findexes[2];
+			findexes[0] = 1;
+			findexes[1] = [[[contents objectAtIndex:1] children] count]; //However many are in education
+			NSIndexPath *findex = [NSIndexPath indexPathWithIndexes:findexes length:2];
+			[treeController insertObject:newNode atArrangedObjectIndexPath:findex];
 			
-			
+			// Make sure the camera is still selected
+			[self selectCamera];
 			break;
 			
 		case LessonTreeNode:
 			NSLog(@"Woot.");
 			
+			NSUInteger indexes[3];
+			indexes[0] = 1;
+			indexes[1] = [givenIndex intValue];
+			indexes[2] = [[[[[contents objectAtIndex:1] children] objectAtIndex:[givenIndex intValue]] children] count];
+			NSIndexPath *index = [NSIndexPath indexPathWithIndexes:indexes length:3];
+			[treeController insertObject:newNode atArrangedObjectIndexPath:index];
 			
+			// Make sure the camera is still selected
+			[self selectCamera];
+		
 			break;
 			
 		default:
@@ -226,12 +241,18 @@
 	
 }
 
+- (void)selectCamera
+{
+	NSIndexPath *cameraPath = [[NSIndexPath indexPathWithIndex:0] indexPathByAddingIndex:0];
+	[treeController setSelectionIndexPath:cameraPath];	
+}
+
 - (void)addFolder:(PBGTreeNode *)treeAddition
 {
 	// NSTreeController inserts objects using NSIndexPath, so we need to calculate this
 	NSIndexPath *indexPath = nil;
 	
-	// if there is no selection, we will add a new group to the end of the contents array
+	/* if there is no selection, we will add a new group to the end of the contents array
 	if ([[treeController selectedObjects] count] == 0)
 	{
 		// there's no selection so add the folder to the top-level and at the end
@@ -254,8 +275,19 @@
 			indexPath = [indexPath indexPathByAddingIndex:[[[[treeController selectedObjects] objectAtIndex:0] children] count]];
 		}
 	}
+	*/
 	
-	// the user is adding a child node, tell the controller directly
+	if ([contents count] > 1) {
+		NSUInteger indexes[2];
+		indexes[0] = 1;
+		indexes[1] = 0;
+		indexPath = [NSIndexPath indexPathWithIndexes:indexes length:2];
+	
+		// the user is adding a child node, tell the controller directly
+	} else {
+		indexPath = [NSIndexPath indexPathWithIndex:[contents count]];
+	}
+					 
 	[treeController insertObject:treeAddition atArrangedObjectIndexPath:indexPath];
 	
 }

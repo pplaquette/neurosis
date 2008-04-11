@@ -197,6 +197,71 @@
 			CDBD73D70DAD801700653ACC /* PBXTextBookmark */ = CDBD73D70DAD801700653ACC /* PBXTextBookmark */;
 			CDBD73D80DAD813800653ACC /* PBXTextBookmark */ = CDBD73D80DAD813800653ACC /* PBXTextBookmark */;
 			CDBD73D90DAD813800653ACC /* PBXTextBookmark */ = CDBD73D90DAD813800653ACC /* PBXTextBookmark */;
+			CDBD73DB0DAD8E2A00653ACC /* PBXTextBookmark */ = CDBD73DB0DAD8E2A00653ACC /* PBXTextBookmark */;
+			CDBD73DC0DAD8E2A00653ACC /* PBXTextBookmark */ = CDBD73DC0DAD8E2A00653ACC /* PBXTextBookmark */;
+			CDBD73E00DAD8EDB00653ACC /* PBXTextBookmark */ = CDBD73E00DAD8EDB00653ACC /* PBXTextBookmark */;
+			CDBD73E10DAD8EDB00653ACC /* PBXTextBookmark */ = CDBD73E10DAD8EDB00653ACC /* PBXTextBookmark */;
+			CDBD73E40DAD908300653ACC /* PBXTextBookmark */ = CDBD73E40DAD908300653ACC /* PBXTextBookmark */;
+			CDBD73E50DAD908300653ACC /* PBXTextBookmark */ = CDBD73E50DAD908300653ACC /* PBXTextBookmark */;
+			CDBD73E70DAD90AF00653ACC /* PBXTextBookmark */ = CDBD73E70DAD90AF00653ACC /* PBXTextBookmark */;
+			CDBD73E80DAD90AF00653ACC /* PBXTextBookmark */ = CDBD73E80DAD90AF00653ACC /* PBXTextBookmark */;
+			CDBD73EA0DAD90C100653ACC /* PBXTextBookmark */ = CDBD73EA0DAD90C100653ACC /* PBXTextBookmark */;
+			CDBD73EB0DAD90C100653ACC /* PBXTextBookmark */ = CDBD73EB0DAD90C100653ACC /* PBXTextBookmark */;
+			CDBD73EC0DAD90DE00653ACC /* PBXTextBookmark */ = CDBD73EC0DAD90DE00653ACC /* PBXTextBookmark */;
+			CDBD73ED0DAD90DE00653ACC /* PBXTextBookmark */ = CDBD73ED0DAD90DE00653ACC /* PBXTextBookmark */;
+			CDBD73EF0DAD912A00653ACC /* PBXTextBookmark */ = CDBD73EF0DAD912A00653ACC /* PBXTextBookmark */;
+			CDBD73F00DAD912A00653ACC /* PBXTextBookmark */ = CDBD73F00DAD912A00653ACC /* PBXTextBookmark */;
+			CDBD73F30DAD931600653ACC /* PBXTextBookmark */ = CDBD73F30DAD931600653ACC /* PBXTextBookmark */;
+			CDBD73F40DAD931600653ACC /* PBXTextBookmark */ = CDBD73F40DAD931600653ACC /* PBXTextBookmark */;
+			CDBD73F70DAD948800653ACC /* PBXTextBookmark */ = CDBD73F70DAD948800653ACC /* PBXTextBookmark */;
+			CDBD740C0DAD96A900653ACC /* PBXTextBookmark */ = CDBD740C0DAD96A900653ACC /* PBXTextBookmark */;
+			CDBD740E0DAD970C00653ACC /* PBXTextBookmark */ = CDBD740E0DAD970C00653ACC /* PBXTextBookmark */;
+			CDBD740F0DAD970C00653ACC /* PBXTextBookmark */ = CDBD740F0DAD970C00653ACC /* PBXTextBookmark */;
+			CDBD74100DAD970C00653ACC /* PBXTextBookmark */ = CDBD74100DAD970C00653ACC /* PBXTextBookmark */;
+			CDBD74110DAD971500653ACC /* PBXTextBookmark */ = CDBD74110DAD971500653ACC /* PBXTextBookmark */;
+			CDBD74130DAD9AA500653ACC /* PBXTextBookmark */ = CDBD74130DAD9AA500653ACC /* PBXTextBookmark */;
+			CDBD74140DAD9AAA00653ACC /* PBXTextBookmark */ = CDBD74140DAD9AAA00653ACC /* PBXTextBookmark */;
+			CDBD74150DAD9AAA00653ACC /* PBXTextBookmark */ = CDBD74150DAD9AAA00653ACC /* PBXTextBookmark */;
+			CDBD74160DAD9AAF00653ACC /* PBXTextBookmark */ = CDBD74160DAD9AAF00653ACC /* PBXTextBookmark */;
+			CDBD741A0DAD9C3800653ACC /* PBXTextBookmark */ = CDBD741A0DAD9C3800653ACC /* PBXTextBookmark */;
+			CDBD741B0DAD9C3800653ACC /* PBXTextBookmark */ = CDBD741B0DAD9C3800653ACC /* PBXTextBookmark */;
+			CDBD741C0DAD9C3800653ACC /* PBXTextBookmark */ = CDBD741C0DAD9C3800653ACC /* PBXTextBookmark */;
+			CDBD741E0DAD9C3B00653ACC /* PBXTextBookmark */ = CDBD741E0DAD9C3B00653ACC /* PBXTextBookmark */;
+			CDBD74230DAD9D4400653ACC /* PBXTextBookmark */ = CDBD74230DAD9D4400653ACC /* PBXTextBookmark */;
+			CDBD74250DAD9DA200653ACC /* PBXTextBookmark */ = CDBD74250DAD9DA200653ACC /* PBXTextBookmark */;
+			CDBD74270DAD9DB200653ACC /* PBXTextBookmark */ = CDBD74270DAD9DB200653ACC /* PBXTextBookmark */;
+			CDBD74290DAD9DBD00653ACC /* PBXTextBookmark */ = CDBD74290DAD9DBD00653ACC /* PBXTextBookmark */;
+			CDBD742B0DAD9EB200653ACC /* PBXTextBookmark */ = CDBD742B0DAD9EB200653ACC /* PBXTextBookmark */;
+			CDBD742C0DAD9EC500653ACC /* PBXTextBookmark */ = CDBD742C0DAD9EC500653ACC /* PBXTextBookmark */;
+			CDBD742D0DAD9EC500653ACC /* PBXTextBookmark */ = CDBD742D0DAD9EC500653ACC /* PBXTextBookmark */;
+			CDBD742E0DAD9EC700653ACC /* PBXTextBookmark */ = CDBD742E0DAD9EC700653ACC /* PBXTextBookmark */;
+			CDBD74300DAD9FBD00653ACC /* PBXTextBookmark */ = CDBD74300DAD9FBD00653ACC /* PBXTextBookmark */;
+			CDBD74320DADA01F00653ACC /* PBXTextBookmark */ = CDBD74320DADA01F00653ACC /* PBXTextBookmark */;
+			CDBD74340DADA04C00653ACC /* PBXTextBookmark */ = CDBD74340DADA04C00653ACC /* PBXTextBookmark */;
+			CDBD74360DADA05E00653ACC /* PBXTextBookmark */ = CDBD74360DADA05E00653ACC /* PBXTextBookmark */;
+			CDBD74380DADA08B00653ACC /* PBXTextBookmark */ = CDBD74380DADA08B00653ACC /* PBXTextBookmark */;
+			CDBD743A0DADA0B200653ACC /* PBXTextBookmark */ = CDBD743A0DADA0B200653ACC /* PBXTextBookmark */;
+			CDBD74490DAED39200653ACC /* PBXBookmark */ = CDBD74490DAED39200653ACC /* PBXBookmark */;
+			CDBD744D0DAED56700653ACC /* PBXTextBookmark */ = CDBD744D0DAED56700653ACC /* PBXTextBookmark */;
+			CDBD744F0DAED57C00653ACC /* PBXTextBookmark */ = CDBD744F0DAED57C00653ACC /* PBXTextBookmark */;
+			CDBD74510DAED73B00653ACC /* PBXTextBookmark */ = CDBD74510DAED73B00653ACC /* PBXTextBookmark */;
+			CDBD74540DAED93D00653ACC /* PBXTextBookmark */ = CDBD74540DAED93D00653ACC /* PBXTextBookmark */;
+			CDBD74570DAED93D00653ACC /* PBXTextBookmark */ = CDBD74570DAED93D00653ACC /* PBXTextBookmark */;
+			CDBD74580DAED93D00653ACC /* PBXTextBookmark */ = CDBD74580DAED93D00653ACC /* PBXTextBookmark */;
+			CDBD745C0DAEDA9500653ACC /* PBXTextBookmark */ = CDBD745C0DAEDA9500653ACC /* PBXTextBookmark */;
+			CDBD745D0DAEDA9500653ACC /* PBXTextBookmark */ = CDBD745D0DAEDA9500653ACC /* PBXTextBookmark */;
+			CDBD745F0DAEDB9700653ACC /* PBXTextBookmark */ = CDBD745F0DAEDB9700653ACC /* PBXTextBookmark */;
+			CDBD74600DAEDB9700653ACC /* PBXTextBookmark */ = CDBD74600DAEDB9700653ACC /* PBXTextBookmark */;
+			CDBD74630DAEDBF600653ACC /* PBXTextBookmark */ = CDBD74630DAEDBF600653ACC /* PBXTextBookmark */;
+			CDBD74640DAEDBF600653ACC /* PBXTextBookmark */ = CDBD74640DAEDBF600653ACC /* PBXTextBookmark */;
+			CDBD74650DAEDC3300653ACC /* PBXTextBookmark */ = CDBD74650DAEDC3300653ACC /* PBXTextBookmark */;
+			CDBD74660DAEDC3300653ACC /* PBXTextBookmark */ = CDBD74660DAEDC3300653ACC /* PBXTextBookmark */;
+			CDBD74690DAEE0F600653ACC /* PBXTextBookmark */ = CDBD74690DAEE0F600653ACC /* PBXTextBookmark */;
+			CDBD746A0DAEE0F600653ACC /* PBXTextBookmark */ = CDBD746A0DAEE0F600653ACC /* PBXTextBookmark */;
+			CDBD746C0DAEE14200653ACC /* PBXTextBookmark */ = CDBD746C0DAEE14200653ACC /* PBXTextBookmark */;
+			CDBD746D0DAEE14200653ACC /* PBXTextBookmark */ = CDBD746D0DAEE14200653ACC /* PBXTextBookmark */;
+			CDBD74710DAEE1B800653ACC /* PBXTextBookmark */ = CDBD74710DAEE1B800653ACC /* PBXTextBookmark */;
+			CDBD74720DAEE1B800653ACC /* PBXTextBookmark */ = CDBD74720DAEE1B800653ACC /* PBXTextBookmark */;
 		};
 		sourceControlManager = CD6410F60D9E9D1B00E5A41C /* Source Control */;
 		userBuildSettings = {
@@ -266,9 +331,9 @@
 	};
 	CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {811, 2254}}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 2170}}";
 			sepNavSelRange = "{1556, 21}";
-			sepNavVisRange = "{1191, 681}";
+			sepNavVisRange = "{1053, 1203}";
 			sepNavWindowFrame = "{{61, 117}, {879, 714}}";
 		};
 	};
@@ -379,9 +444,9 @@
 	CDBD70DB0DAB13E000653ACC /* PBGDefines.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
-			sepNavSelRange = "{447, 20}";
+			sepNavSelRange = "{360, 0}";
 			sepNavVisRange = "{0, 514}";
-			sepNavWindowFrame = "{{419, 117}, {879, 714}}";
+			sepNavWindowFrame = "{{81, 118}, {879, 714}}";
 		};
 	};
 	CDBD71210DABF35400653ACC /* PBGNeuron.m */ = {
@@ -472,7 +537,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 209";
 		rLen = 0;
-		rLoc = 7759;
+		rLoc = 9387;
 		rType = 0;
 		vrLen = 547;
 		vrLoc = 5794;
@@ -492,7 +557,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 165";
 		rLen = 0;
-		rLoc = 6016;
+		rLoc = 5989;
 		rType = 0;
 		vrLen = 1531;
 		vrLoc = 4681;
@@ -520,7 +585,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 208";
 		rLen = 0;
-		rLoc = 7759;
+		rLoc = 9387;
 		rType = 0;
 		vrLen = 424;
 		vrLoc = 5896;
@@ -544,7 +609,7 @@
 		comments = "warning: 'PBGTreeNode' may not respond to '-nodeURL'";
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		rLen = 0;
-		rLoc = 288;
+		rLoc = 320;
 		rType = 1;
 	};
 	CDBD71E80DAD550700653ACC /* PBXTextBookmark */ = {
@@ -572,7 +637,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 232";
 		rLen = 0;
-		rLoc = 8553;
+		rLoc = 10181;
 		rType = 0;
 		vrLen = 760;
 		vrLoc = 7750;
@@ -582,7 +647,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 208";
 		rLen = 0;
-		rLoc = 7759;
+		rLoc = 9387;
 		rType = 0;
 		vrLen = 421;
 		vrLoc = 5896;
@@ -602,7 +667,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 111";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3613;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 7754;
@@ -612,7 +677,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 111";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3613;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 5857;
@@ -622,7 +687,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 111";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3613;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 7754;
@@ -632,7 +697,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 111";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3613;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 5857;
@@ -642,7 +707,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 114";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 7751;
@@ -652,7 +717,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 114";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 5854;
@@ -670,7 +735,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 2982;
@@ -694,7 +759,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 2982;
@@ -744,7 +809,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 2982;
@@ -786,7 +851,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 117";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 943;
 		vrLoc = 7725;
@@ -806,7 +871,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 175";
 		rLen = 0;
-		rLoc = 6110;
+		rLoc = 6116;
 		rType = 0;
 		vrLen = 492;
 		vrLoc = 4893;
@@ -836,7 +901,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 117";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 543;
 		vrLoc = 5944;
@@ -883,7 +948,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 2982;
@@ -923,7 +988,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 2982;
@@ -963,7 +1028,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 2982;
@@ -973,7 +1038,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 121";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 2943;
@@ -997,7 +1062,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1885;
@@ -1006,7 +1071,7 @@
 		isa = PBXTextBookmark;
 		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
 		rLen = 0;
-		rLoc = 2147483738;
+		rLoc = 1182;
 		rType = 0;
 	};
 	CDBD737A0DAD657900653ACC /* PBXTextBookmark */ = {
@@ -1014,7 +1079,7 @@
 		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
 		name = "NeurosisController.h: 45";
 		rLen = 0;
-		rLoc = 924;
+		rLoc = 923;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 153;
@@ -1034,7 +1099,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1885;
@@ -1044,7 +1109,7 @@
 		comments = "warning: 'NeurosisController' may not respond to '-addNode:'";
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		rLen = 1;
-		rLoc = 142;
+		rLoc = 135;
 		rType = 1;
 	};
 	CDBD737E0DAD65E800653ACC /* PBXTextBookmark */ = {
@@ -1052,7 +1117,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 173";
 		rLen = 0;
-		rLoc = 6016;
+		rLoc = 5989;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 4759;
@@ -1062,7 +1127,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 123";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 555;
 		vrLoc = 5856;
@@ -1072,7 +1137,7 @@
 		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
 		name = "NeurosisController.h: 45";
 		rLen = 0;
-		rLoc = 924;
+		rLoc = 923;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 153;
@@ -1092,7 +1157,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1885;
@@ -1102,7 +1167,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4911;
+		rLoc = 4574;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1885;
@@ -1112,7 +1177,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 255";
 		rLen = 0;
-		rLoc = 8555;
+		rLoc = 10183;
 		rType = 0;
 		vrLen = 1253;
 		vrLoc = 7320;
@@ -1142,7 +1207,7 @@
 		comments = "warning: no '-urlString' method found";
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		rLen = 0;
-		rLoc = 422;
+		rLoc = 454;
 		rType = 1;
 	};
 	CDBD738D0DAD67EB00653ACC /* PBXTextBookmark */ = {
@@ -1150,7 +1215,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 400";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 13874;
@@ -1160,7 +1225,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 123";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 555;
 		vrLoc = 5856;
@@ -1170,7 +1235,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 255";
 		rLen = 0;
-		rLoc = 8666;
+		rLoc = 10294;
 		rType = 0;
 		vrLen = 1031;
 		vrLoc = 0;
@@ -1200,7 +1265,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 400";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 13874;
@@ -1210,7 +1275,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 123";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 555;
 		vrLoc = 5856;
@@ -1250,7 +1315,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 199";
 		rLen = 0;
-		rLoc = 6771;
+		rLoc = 8150;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 1120;
@@ -1280,7 +1345,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 400";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 13863;
@@ -1298,7 +1363,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 400";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 13863;
@@ -1343,7 +1408,7 @@
 		isa = PBXTextBookmark;
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		rLen = 6;
-		rLoc = 7263;
+		rLoc = 8642;
 		rType = 0;
 	};
 	CDBD73AB0DAD6AF600653ACC /* PBXTextBookmark */ = {
@@ -1351,7 +1416,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 123";
 		rLen = 0;
-		rLoc = 4096;
+		rLoc = 4240;
 		rType = 0;
 		vrLen = 555;
 		vrLoc = 5856;
@@ -1387,7 +1452,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 409";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 280;
 		vrLoc = 11766;
@@ -1407,7 +1472,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 209";
 		rLen = 6;
-		rLoc = 7263;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 5911;
@@ -1417,7 +1482,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 199";
 		rLen = 0;
-		rLoc = 6771;
+		rLoc = 8150;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 1120;
@@ -1457,7 +1522,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 209";
 		rLen = 6;
-		rLoc = 7263;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 5911;
@@ -1467,7 +1532,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 526";
 		rLen = 0;
-		rLoc = 14030;
+		rLoc = 15658;
 		rType = 0;
 		vrLen = 538;
 		vrLoc = 13675;
@@ -1497,7 +1562,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 391";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 1126;
 		vrLoc = 10940;
@@ -1527,7 +1592,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 468";
 		rLen = 47;
-		rLoc = 13666;
+		rLoc = 15294;
 		rType = 0;
 		vrLen = 715;
 		vrLoc = 12525;
@@ -1547,7 +1612,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 391";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 538;
 		vrLoc = 12702;
@@ -1557,7 +1622,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 209";
 		rLen = 6;
-		rLoc = 7263;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 621;
 		vrLoc = 5911;
@@ -1567,7 +1632,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 384";
 		rLen = 0;
-		rLoc = 12062;
+		rLoc = 13690;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 10643;
@@ -1587,7 +1652,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4903;
+		rLoc = 4527;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 3200;
@@ -1607,7 +1672,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 387";
 		rLen = 0;
-		rLoc = 12166;
+		rLoc = 13794;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 12641;
@@ -1617,7 +1682,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 210";
 		rLen = 6;
-		rLoc = 7263;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 424;
 		vrLoc = 6299;
@@ -1627,7 +1692,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4887;
+		rLoc = 4514;
 		rType = 0;
 		vrLen = 1329;
 		vrLoc = 3162;
@@ -1647,7 +1712,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 133";
 		rLen = 0;
-		rLoc = 4573;
+		rLoc = 4511;
 		rType = 0;
 		vrLen = 1500;
 		vrLoc = 3361;
@@ -1667,7 +1732,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 127";
 		rLen = 0;
-		rLoc = 4232;
+		rLoc = 4315;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 3361;
@@ -1687,7 +1752,7 @@
 		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
 		name = "NeurosisController.m: 245";
 		rLen = 0;
-		rLoc = 7185;
+		rLoc = 8564;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 3644;
@@ -1702,20 +1767,657 @@
 		vrLen = 514;
 		vrLoc = 0;
 	};
+	CDBD73DB0DAD8E2A00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 123";
+		rLen = 0;
+		rLoc = 4193;
+		rType = 0;
+		vrLen = 1640;
+		vrLoc = 2927;
+	};
+	CDBD73DC0DAD8E2A00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73E00DAD8EDB00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 140";
+		rLen = 0;
+		rLoc = 4511;
+		rType = 0;
+		vrLen = 1161;
+		vrLoc = 4014;
+	};
+	CDBD73E10DAD8EDB00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73E40DAD908300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 266";
+		rLen = 0;
+		rLoc = 9261;
+		rType = 0;
+		vrLen = 1161;
+		vrLoc = 6984;
+	};
+	CDBD73E50DAD908300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73E70DAD90AF00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 257";
+		rLen = 0;
+		rLoc = 8978;
+		rType = 0;
+		vrLen = 1375;
+		vrLoc = 6432;
+	};
+	CDBD73E80DAD90AF00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73EA0DAD90C100653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 257";
+		rLen = 0;
+		rLoc = 8983;
+		rType = 0;
+		vrLen = 1379;
+		vrLoc = 6432;
+	};
+	CDBD73EB0DAD90C100653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73EC0DAD90DE00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 257";
+		rLen = 0;
+		rLoc = 8983;
+		rType = 0;
+		vrLen = 584;
+		vrLoc = 5848;
+	};
+	CDBD73ED0DAD90DE00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73EF0DAD912A00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 133";
+		rLen = 0;
+		rLoc = 4511;
+		rType = 0;
+		vrLen = 1338;
+		vrLoc = 3607;
+	};
+	CDBD73F00DAD912A00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73F30DAD931600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 84";
+		rLen = 0;
+		rLoc = 2632;
+		rType = 0;
+		vrLen = 1434;
+		vrLoc = 1815;
+	};
+	CDBD73F40DAD931600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBD70DB0DAB13E000653ACC /* PBGDefines.h */;
+		name = "PBGDefines.h: 19";
+		rLen = 20;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 0;
+	};
+	CDBD73F70DAD948800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 205";
+		rLen = 0;
+		rLoc = 6670;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 5850;
+	};
+	CDBD740C0DAD96A900653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 206";
+		rLen = 0;
+		rLoc = 6421;
+		rType = 0;
+		vrLen = 936;
+		vrLoc = 5841;
+	};
+	CDBD740E0DAD970C00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'newNode' undeclared (first use in this function)";
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		rLen = 1;
+		rLoc = 135;
+		rType = 1;
+	};
+	CDBD740F0DAD970C00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 143";
+		rLen = 0;
+		rLoc = 4580;
+		rType = 0;
+		vrLen = 1094;
+		vrLoc = 608;
+	};
+	CDBD74100DAD970C00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 244";
+		rLen = 6;
+		rLoc = 8642;
+		rType = 0;
+		vrLen = 443;
+		vrLoc = 6025;
+	};
+	CDBD74110DAD971500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 205";
+		rLen = 0;
+		rLoc = 6399;
+		rType = 0;
+		vrLen = 929;
+		vrLoc = 5774;
+	};
+	CDBD74130DAD9AA500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 208";
+		rLen = 0;
+		rLoc = 6593;
+		rType = 0;
+		vrLen = 908;
+		vrLoc = 5774;
+	};
+	CDBD74140DAD9AAA00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 143";
+		rLen = 0;
+		rLoc = 4580;
+		rType = 0;
+		vrLen = 1006;
+		vrLoc = 608;
+	};
+	CDBD74150DAD9AAA00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 245";
+		rLen = 6;
+		rLoc = 8642;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 6025;
+	};
+	CDBD74160DAD9AAF00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 208";
+		rLen = 0;
+		rLoc = 6593;
+		rType = 0;
+		vrLen = 908;
+		vrLoc = 5774;
+	};
+	CDBD741A0DAD9C3800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: syntax error before 'NSIndexPath'";
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		rLen = 0;
+		rLoc = 228;
+		rType = 1;
+	};
+	CDBD741B0DAD9C3800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 224";
+		rLen = 0;
+		rLoc = 7367;
+		rType = 0;
+		vrLen = 791;
+		vrLoc = 6393;
+	};
+	CDBD741C0DAD9C3800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 252";
+		rLen = 6;
+		rLoc = 8642;
+		rType = 0;
+		vrLen = 337;
+		vrLoc = 5920;
+	};
+	CDBD741E0DAD9C3B00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 126";
+		rLen = 0;
+		rLoc = 4327;
+		rType = 0;
+		vrLen = 1388;
+		vrLoc = 3662;
+	};
+	CDBD74230DAD9D4400653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 221";
+		rLen = 0;
+		rLoc = 7026;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 6393;
+	};
+	CDBD74250DAD9DA200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 219";
+		rLen = 0;
+		rLoc = 6880;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 6393;
+	};
+	CDBD74270DAD9DB200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 218";
+		rLen = 0;
+		rLoc = 6846;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 6393;
+	};
+	CDBD74290DAD9DBD00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 218";
+		rLen = 0;
+		rLoc = 6846;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 6393;
+	};
+	CDBD742B0DAD9EB200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 218";
+		rLen = 0;
+		rLoc = 6846;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 6003;
+	};
+	CDBD742C0DAD9EC500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 230";
+		rLen = 0;
+		rLoc = 7367;
+		rType = 0;
+		vrLen = 840;
+		vrLoc = 6393;
+	};
+	CDBD742D0DAD9EC500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 258";
+		rLen = 6;
+		rLoc = 8642;
+		rType = 0;
+		vrLen = 219;
+		vrLoc = 5920;
+	};
+	CDBD742E0DAD9EC700653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 218";
+		rLen = 0;
+		rLoc = 6846;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 6003;
+	};
+	CDBD74300DAD9FBD00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 136";
+		rLen = 0;
+		rLoc = 4867;
+		rType = 0;
+		vrLen = 1402;
+		vrLoc = 3411;
+	};
+	CDBD74320DADA01F00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 151";
+		rLen = 0;
+		rLoc = 5172;
+		rType = 0;
+		vrLen = 1068;
+		vrLoc = 3983;
+	};
+	CDBD74340DADA04C00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 151";
+		rLen = 0;
+		rLoc = 5172;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 3983;
+	};
+	CDBD74360DADA05E00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 150";
+		rLen = 0;
+		rLoc = 5154;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 3983;
+	};
+	CDBD74380DADA08B00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 153";
+		rLen = 0;
+		rLoc = 5304;
+		rType = 0;
+		vrLen = 1127;
+		vrLoc = 3983;
+	};
+	CDBD743A0DADA0B200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 135";
+		rLen = 0;
+		rLoc = 4867;
+		rType = 0;
+		vrLen = 1054;
+		vrLoc = 3983;
+	};
+	CDBD74490DAED39200653ACC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+	};
+	CDBD744D0DAED56700653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 137";
+		rLen = 0;
+		rLoc = 4867;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 3413;
+	};
+	CDBD744F0DAED57C00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 137";
+		rLen = 0;
+		rLoc = 4841;
+		rType = 0;
+		vrLen = 1574;
+		vrLoc = 3413;
+	};
+	CDBD74510DAED73B00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 133";
+		rLen = 0;
+		rLoc = 4429;
+		rType = 0;
+		vrLen = 1633;
+		vrLoc = 3413;
+	};
+	CDBD74540DAED93D00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 244";
+		rLen = 20;
+		rLoc = 7674;
+		rType = 0;
+		vrLen = 1250;
+		vrLoc = 7035;
+	};
+	CDBD74570DAED93D00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		rLen = 0;
+		rLoc = 2147483670;
+		rType = 0;
+	};
+	CDBD74580DAED93D00653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 52";
+		rLen = 0;
+		rLoc = 1103;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD745C0DAEDA9500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 238";
+		rLen = 0;
+		rLoc = 7668;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 4238;
+	};
+	CDBD745D0DAEDA9500653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD745F0DAEDB9700653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 213";
+		rLen = 0;
+		rLoc = 6879;
+		rType = 0;
+		vrLen = 1126;
+		vrLoc = 6485;
+	};
+	CDBD74600DAEDB9700653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD74630DAEDBF600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 227";
+		rLen = 0;
+		rLoc = 7363;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 6485;
+	};
+	CDBD74640DAEDBF600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD74650DAEDC3300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 135";
+		rLen = 0;
+		rLoc = 4511;
+		rType = 0;
+		vrLen = 1428;
+		vrLoc = 3820;
+	};
+	CDBD74660DAEDC3300653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 941;
+		vrLoc = 236;
+	};
+	CDBD74690DAEE0F600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 228";
+		rLen = 0;
+		rLoc = 7230;
+		rType = 0;
+		vrLen = 1326;
+		vrLoc = 6292;
+	};
+	CDBD746A0DAEE0F600653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD746C0DAEE14200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 228";
+		rLen = 0;
+		rLoc = 7251;
+		rType = 0;
+		vrLen = 1414;
+		vrLoc = 6073;
+	};
+	CDBD746D0DAEE14200653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
+	CDBD74710DAEE1B800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
+		name = "NeurosisController.m: 136";
+		rLen = 0;
+		rLoc = 4576;
+		rType = 0;
+		vrLen = 1550;
+		vrLoc = 3662;
+	};
+	CDBD74720DAEE1B800653ACC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */;
+		name = "NeurosisController.h: 38";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 236;
+	};
 	CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 756}}";
-			sepNavSelRange = "{1070, 0}";
-			sepNavVisRange = "{207, 916}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 784}}";
+			sepNavSelRange = "{770, 0}";
+			sepNavVisRange = "{236, 890}";
 			sepNavWindowFrame = "{{448, 161}, {879, 714}}";
 		};
 	};
 	CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 6958}}";
-			sepNavSelRange = "{7185, 0}";
-			sepNavVisRange = "{3644, 1379}";
-			sepNavWindowFrame = "{{514, 34}, {879, 714}}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 7462}}";
+			sepNavSelRange = "{4576, 0}";
+			sepNavVisRange = "{3662, 1550}";
+			sepNavWindowFrame = "{{391, 32}, {879, 714}}";
 		};
 	};
 }

@@ -202,7 +202,7 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>CDBD720E0DAD5AFE00653ACC</string>
+				<string>CDBD744B0DAED56700653ACC</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>NeurosisController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
@@ -210,16 +210,16 @@
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>CDBD720F0DAD5AFE00653ACC</string>
+						<string>CDBD744C0DAED56700653ACC</string>
 						<key>PBXProjectModuleLabel</key>
 						<string>NeurosisController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>CDBD73D80DAD813800653ACC</string>
+						<string>CDBD74710DAEE1B800653ACC</string>
 						<key>history</key>
 						<array>
-							<string>CDBD73860DAD676700653ACC</string>
+							<string>CDBD74490DAED39200653ACC</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -242,24 +242,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>CDBD73720DAD642100653ACC</string>
+				<string>CDBD74550DAED93D00653ACC</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>PBGDefines.h</string>
+				<string>NeurosisController.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>CDBD73730DAD642100653ACC</string>
+						<string>CDBD74560DAED93D00653ACC</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>PBGDefines.h</string>
+						<string>NeurosisController.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>CDBD73D90DAD813800653ACC</string>
+						<string>CDBD74720DAEE1B800653ACC</string>
 						<key>history</key>
 						<array>
-							<string>CDBD73700DAD635800653ACC</string>
+							<string>CDBD74570DAED93D00653ACC</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -275,7 +275,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>81 174 879 658 0 0 1440 878 </string>
+				<string>448 217 879 658 0 0 1440 878 </string>
 			</dict>
 		</dict>
 	</array>
@@ -357,11 +357,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {218, 527}}</string>
+							<string>{{0, 7}, {218, 527}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -605,9 +606,9 @@
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>CDF6B3FF0DA2BB27009F28C4</string>
-		<string>CDBD73720DAD642100653ACC</string>
 		<string>/Users/patrick/Desktop/neurosis/Neurosis.xcodeproj</string>
-		<string>CDBD720E0DAD5AFE00653ACC</string>
+		<string>CDBD74550DAED93D00653ACC</string>
+		<string>CDBD744B0DAED56700653ACC</string>
 	</array>
 	<key>WindowString</key>
 	<string>162 292 763 586 0 0 1440 878 </string>
@@ -948,7 +949,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {902, 359}}</string>
 								<key>RubberWindowFrame</key>
-								<string>438 269 902 400 0 0 1440 878 </string>
+								<string>493 240 902 400 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -977,7 +978,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>438 269 902 400 0 0 1440 878 </string>
+			<string>493 240 902 400 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
