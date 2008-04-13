@@ -29,7 +29,7 @@
 	IBOutlet NSTreeController	*treeController;
 	
 	CameraController			*cameraController;
-	LessonController			*lessonContoller;
+	LessonController			*lessonController;
 
 	NSMutableArray				*contents;
 	
@@ -43,9 +43,6 @@
 - (NSMutableArray*)contents;
 
 - (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex;
-
-- (void)addElement:(PBGTreeNode *)treeAddition;
-- (void)addFolder:(PBGTreeNode *)treeAddition;
 
 - (BOOL)isSpecialGroup:(PBGTreeNode *)groupNode;
 

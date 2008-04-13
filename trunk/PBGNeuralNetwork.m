@@ -111,7 +111,7 @@
 
 - (void)learnFromExpectedOutputs:(NSArray *)expectedOutputs
 {
-	NSArray * actualOutputs = [self computeOutputValues];
+	NSArray *actualOutputs = [self computeOutputValuesArray];
 	int i = 0;
 	
 	// Output layer
@@ -176,7 +176,7 @@
 	}
 }
 
-- (NSArray *)computeOutputValues
+- (NSArray *)computeOutputValuesArray
 {
 	NSMutableArray *computedOutputValues = [[NSMutableArray alloc] initWithCapacity:[outputsArray count]];
 	for (PBGNeuron *outputNeuron in outputsArray) {
@@ -190,7 +190,7 @@
 
 - (NSString *)outputValuesString
 {
-	NSArray *outputs = [self computeOutputValues];
+	NSArray *outputs = [self computeOutputValuesArray];
 	NSMutableString *returnString = [[NSMutableString alloc] initWithString:@""];
 	
 	for (NSNumber *output in outputs){

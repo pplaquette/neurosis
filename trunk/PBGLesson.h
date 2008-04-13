@@ -13,11 +13,16 @@
 	
 	NSString		*imagePath;
 	NSArray			*imageAsArray;
+	NSImage			*image;
 	
 	NSString		*meaning;
 	
 }
 
 - (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m;
+
+@property (assign) NSArray *imageAsArray;
+@property (assign) NSImage *image;
+@property (copy) NSString *meaning;
 
 @end
