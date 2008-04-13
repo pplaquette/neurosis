@@ -11,4 +11,14 @@
 
 @implementation LessonController
 
+- (NSImageView *)imageView
+{
+	return imageView;
+}
+
+- (NSTextField *)meaningTextField
+{
+	return meaningTextField;
+}
+
 @end

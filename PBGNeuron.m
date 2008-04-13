@@ -63,6 +63,11 @@
 	value = newValue;
 }
 
+- (NSMutableArray *)inputConnectionsArray
+{
+	return inputConnectionsArray;
+}
+
 - (void)dealloc
 {
 	[inputConnectionsArray release];
@@ -109,11 +114,6 @@
 	}
 	
 	return value;
-}
-
-- (NSMutableArray *)inputConnectionsArray
-{
-	return inputConnectionsArray;
 }
 
 @end

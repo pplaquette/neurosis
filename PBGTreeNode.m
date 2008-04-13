@@ -65,7 +65,7 @@
 - (void)setLesson:(PBGLesson *)newLesson
 {
 	[newLesson retain];
-	[lesson release];
+	if (lesson) { [lesson release]; }
 	lesson = newLesson;
 }
 
@@ -238,6 +238,7 @@
 
 - (void)dealloc
 {
+	if (lesson) { [lesson release]; }
 	[nodeTitle release];
 	[nodeIcon release];
 	[children release];

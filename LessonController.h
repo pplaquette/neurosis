@@ -12,11 +12,11 @@
 @interface LessonController : NSViewController {
 	
 	IBOutlet NSImageView		*imageView;
-	IBOutlet NSTextField		*lessonOfTextField;
-	
-	NSImage						*image;
-	NSArray						*interpretedImageData;
+	IBOutlet NSTextField		*meaningTextField;
 
 }
+
+- (NSImageView *)imageView;
+- (NSTextField *)meaningTextField;
 
 @end

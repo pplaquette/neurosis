@@ -24,7 +24,7 @@
 - (void)setStartingValues:(NSArray *)values;
 - (void)learnFromExpectedOutputs:(NSArray *)expectedOutputs;
 
-- (NSArray *)computeOutputValues;
+- (NSArray *)computeOutputValuesArray;
 - (NSString *)outputValuesString;
 
 @end
