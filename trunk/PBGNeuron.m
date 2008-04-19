@@ -7,6 +7,7 @@
 //
 
 #import "PBGNeuron.h"
+#include <stdlib.h>
 
 @interface PBGNeuron (Private)
 - (double)evaluate;
@@ -14,16 +15,27 @@
 
 @implementation PBGNeuron
 
-- (id)initWithID:(int)i
+- (id)initWithID:(int)i networkSize:(int)netSize threshold:(BOOL)t
 {
 	self = [super init];
 	if (self != nil) {
 		neuronID = i;
 		inputConnectionsArray = [[NSMutableArray alloc] initWithCapacity:3];
+		double high = 2.4 / netSize;
+		double low = -2.4 / netSize;
+		
 		value = 0;
 		valueWasExplicitlySet = NO;
-		threshold = 0.5;
-		activationFunction = PBGStepFunction;
+		
+		errorGradient = 0;
+		
+		usingThreshold = t;
+		if (usingThreshold)
+			threshold = (rand() / ( (double) (RAND_MAX) + 1.0)) * (high - low) + low;
+		else
+			threshold = 0;
+		
+		activationFunction = PBGSigmoidFunction;
 	}
 	return self;
 }
@@ -63,9 +75,50 @@
 	value = newValue;
 }
 
+- (void)setThreshold:(double)t
+{
+	threshold = t;
+}
+
+- (double)threshold
+{
+	return threshold;
+}
+
 - (NSMutableArray *)inputConnectionsArray
 {
 	return inputConnectionsArray;
+}
+
+- (void)setNewThreshold:(double)t
+{
+	newThreshold = t;
+}
+
+- (void)updateNow
+{
+	[self setThreshold:newThreshold];
+	
+	for (PBGWeightedConnection *connection in inputConnectionsArray) {
+		[connection updateNow];
+	}
+}
+
+- (double)errorGradientUsingExpectedOutput:(double)expectedOutput
+{
+	double errorDelta = expectedOutput - value;
+	errorGradient = value * (1 - value) * errorDelta;	
+	return errorGradient;
+}
+
+- (double)errorGradient
+{
+	return errorGradient;
+}
+
+- (void)setErrorGradient:(double)e
+{
+	errorGradient = e;
 }
 
 - (void)dealloc
@@ -84,7 +137,8 @@
 		sigma += [connection outputValue];
 	}
 	
-	sigma = sigma - threshold;
+	if (usingThreshold)
+		sigma = sigma - threshold;
 	
 	switch (activationFunction) {
 		default:
@@ -105,13 +159,15 @@
 			break;
 			
 		case PBGSigmoidFunction:
-			value = 1/(1+exp(0-sigma));
+			value = 1/(1+exp(-sigma));
 			break;
 			
 		case PBGLinearFunction:
 			value = sigma;
 			break;
 	}
+	
+	NSLog(@"Neuron %@ is returning value of %f", self, value);
 	
 	return value;
 }

@@ -13,13 +13,17 @@
 @interface PBGWeightedConnection : NSObject {
 	PBGNeuron		*inputNeuron;
 	double			weight;
+	double			newWeight;
 	BOOL			canBeAdjusted;
 }
 
-- (id)initWithInput:(PBGNeuron *)newInput weight:(double)newWeight adjustable:(BOOL)adjustableValue;
+- (id)initWithInput:(PBGNeuron *)newInput weight:(double)w adjustable:(BOOL)adjustableValue;
 - (double)outputValue;
 - (PBGNeuron *)inputNeuron;
 - (double)weight;
-- (void)setWeight:(double)newWeight;
+- (void)setWeight:(double)w;
+
+- (void)setNewWeight:(double)w;
+- (void)updateNow;
 
 @end
