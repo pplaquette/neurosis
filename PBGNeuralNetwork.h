@@ -11,7 +11,7 @@
 
 @interface PBGNeuralNetwork : NSObject {
 	int				neuronCounter;
-	float			learningRate;
+	double			learningRate;
 
 	NSMutableArray	*hiddenLayersArray;
 	NSMutableArray	*inputsArray;
@@ -24,7 +24,8 @@
 - (void)setStartingValues:(NSArray *)values;
 - (void)learnFromExpectedOutputs:(NSArray *)expectedOutputs;
 
-- (NSArray *)computeOutputValuesArray;
+- (NSArray *)computeOutputValues;
 - (NSString *)outputValuesString;
 
+- (void)printDescription;
 @end

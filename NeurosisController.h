@@ -11,6 +11,8 @@
 #import "CameraController.h"
 #import "LessonController.h"
 
+#import "PBGNeuralNetwork.h"
+
 #import "PBGTreeNode.h"
 #import "PBGSeparatorCell.h"
 
@@ -32,6 +34,9 @@
 	LessonController			*lessonController;
 
 	NSMutableArray				*contents;
+	
+	PBGNeuralNetwork			*neuralNetwork;
+	float						resolution;
 	
 	PBGSeparatorCell			*separatorCell;
 	

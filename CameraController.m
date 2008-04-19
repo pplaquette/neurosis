@@ -82,7 +82,7 @@
 
 - (CIImage *)view:(QTCaptureView *)view willDisplayImage:(CIImage *)i
 {
-	return [PBGANNImageProcessor applyBrightness:brightness andContrast:contrast toCIImage:i];
+	return [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:10 toCIImage:i];
 }
 
 
@@ -97,8 +97,13 @@
 	}
 	
 	CIImage *capturedImage = [CIImage imageWithCVImageBuffer:imageBuffer];
-	capturedImage = [PBGANNImageProcessor applyBrightness:brightness andContrast:contrast toCIImage:capturedImage];
+	capturedImage = [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:10 toCIImage:capturedImage];
 
+	NSArray *test = [PBGANNImageProcessor arrayRepresentationOfImage:capturedImage withPixellationFactor:10];
+	NSLog(@"Test size: %d", [test count]);
+	[test release];
+	
+	
 	NSCIImageRep *imageRep = [NSCIImageRep imageRepWithCIImage:capturedImage];
 	NSImage *image = [[NSImage alloc] initWithSize:[imageRep size]];
 	[image addRepresentation:imageRep];

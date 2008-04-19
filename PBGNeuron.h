@@ -21,21 +21,37 @@ enum PBGActivationFunction	{
 	int							neuronID;
 
 	NSMutableArray				*inputConnectionsArray;
-	NSMutableArray				*outputConnectionsArray;
 	
-	int							value;
+	double						value;
 	BOOL						valueWasExplicitlySet; // Used in order to create "Dummy" Neurons for the input layer.
+	
+	BOOL						usingThreshold;
 	double						threshold;
+	double						newThreshold;
+	
+	double						errorGradient;
 	
 	enum PBGActivationFunction	activationFunction;
 }
 
-- (id)initWithID:(int)i;
+- (id)initWithID:(int)i networkSize:(int)netSize threshold:(BOOL)t;
 
 - (double)outputValue;
+
+- (double)errorGradientUsingExpectedOutput:(double)expectedOutput;
+- (double)errorGradient;
+- (void)setErrorGradient:(double)e;
+
 - (void)addInputConnection:(PBGWeightedConnection *)connection;
 - (PBGWeightedConnection *)connectionToNeuron:(PBGNeuron *)neuron;
 - (void)setValue:(double)newValue;
+
+- (void)setThreshold:(double)t;
+- (double)threshold;
+
 - (NSMutableArray *)inputConnectionsArray;
+
+- (void)setNewThreshold:(double)t;
+- (void)updateNow;
 
 @end

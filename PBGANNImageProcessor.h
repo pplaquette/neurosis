@@ -18,7 +18,8 @@
 	float			contrastLevel;
 }
 
-+ (CIImage *)applyBrightness:(float)b andContrast:(float)cont toCIImage:(CIImage *)i;
++ (CIImage *)applyBrightness:(float)brightness contrast:(float)contrast pixellation:(float)pixellation toCIImage:(CIImage *)i;
++ (NSArray *)arrayRepresentationOfImage:(CIImage *)image withPixellationFactor:(int)pixellation;
 
 - (id)initWithHorizontalElements:(int)h verticalElements:(int)v;
 

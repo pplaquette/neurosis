@@ -10,11 +10,11 @@
 
 @implementation PBGWeightedConnection
 
-- (id)initWithInput:(PBGNeuron *)newInput weight:(double)newWeight adjustable:(BOOL)adjustableValue
+- (id)initWithInput:(PBGNeuron *)newInput weight:(double)w adjustable:(BOOL)adjustableValue
 {
 	self = [super init];
 	if (self != nil) {
-		weight = newWeight;
+		weight = w;
 		inputNeuron = [newInput retain];
 		canBeAdjusted = adjustableValue;
 	}
@@ -36,14 +36,26 @@
 	return weight;
 }
 
-- (void)setWeight:(double)newWeight
+- (void)setWeight:(double)w
 {
+	weight = w;
+}
+
+- (void)setNewWeight:(double)w
+{
+	newWeight = w;
+}
+
+- (void)updateNow
+{
+	NSLog(@"Updating %@ to %f", self, newWeight);
 	weight = newWeight;
+	[inputNeuron updateNow];
 }
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"-> %@", inputNeuron];
+	return [NSString stringWithFormat:@"%@ - %f ->", inputNeuron, weight];
 }
 
 - (void) dealloc

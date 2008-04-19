@@ -83,14 +83,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 229794444;
-			PBXWorkspaceStateSaveDate = 229794444;
-		};
-		perUserProjectItems = {
-			CD95AAC50DB268BF002F2177 /* PBXBookmark */ = CD95AAC50DB268BF002F2177 /* PBXBookmark */;
-			CD95AACE0DB26945002F2177 /* PBXTextBookmark */ = CD95AACE0DB26945002F2177 /* PBXTextBookmark */;
-			CD95AADB0DB26A6C002F2177 /* PBXTextBookmark */ = CD95AADB0DB26A6C002F2177 /* PBXTextBookmark */;
-			CD95AADC0DB26A6C002F2177 /* PBXTextBookmark */ = CD95AADC0DB26A6C002F2177 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 229990020;
+			PBXWorkspaceStateSaveDate = 229990020;
 		};
 		sourceControlManager = CD6410F60D9E9D1B00E5A41C /* Source Control */;
 		userBuildSettings = {
@@ -144,25 +138,25 @@
 	};
 	CD29BFE10DA800B200AB9913 /* CameraController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1212, 2282}}";
-			sepNavSelRange = "{83, 0}";
-			sepNavVisRange = "{1536, 1234}";
-			sepNavWindowFrame = "{{236, 17}, {879, 714}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1212, 2324}}";
+			sepNavSelRange = "{2863, 0}";
+			sepNavVisRange = "{2501, 1392}";
+			sepNavWindowFrame = "{{364, 45}, {879, 714}}";
 		};
 	};
 	CD29BFF60DA8018200AB9913 /* PBGANNImageProcessor.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
-			sepNavSelRange = "{398, 0}";
-			sepNavVisRange = "{0, 664}";
+			sepNavIntBoundsRect = "{{0, 0}, {904, 420}}";
+			sepNavSelRange = "{425, 0}";
+			sepNavVisRange = "{0, 802}";
 			sepNavWindowFrame = "{{84, 96}, {879, 714}}";
 		};
 	};
 	CD29BFF70DA8018200AB9913 /* PBGANNImageProcessor.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 2170}}";
-			sepNavSelRange = "{1556, 21}";
-			sepNavVisRange = "{1053, 1203}";
+			sepNavIntBoundsRect = "{{0, 0}, {904, 2534}}";
+			sepNavSelRange = "{2679, 0}";
+			sepNavVisRange = "{1627, 889}";
 			sepNavWindowFrame = "{{61, 117}, {879, 714}}";
 		};
 	};
@@ -270,37 +264,6 @@
 			sepNavWindowFrame = "{{378, 49}, {879, 714}}";
 		};
 	};
-	CD95AAC50DB268BF002F2177 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = CD8E07450DA5A99A0086C2FC /* PBGTreeNode.h */;
-	};
-	CD95AACE0DB26945002F2177 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
-		rLen = 0;
-		rLoc = 301;
-		rType = 1;
-	};
-	CD95AADB0DB26A6C002F2177 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */;
-		name = "NeurosisController.m: 300";
-		rLen = 0;
-		rLoc = 9207;
-		rType = 0;
-		vrLen = 1131;
-		vrLoc = 8567;
-	};
-	CD95AADC0DB26A6C002F2177 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CD8E07450DA5A99A0086C2FC /* PBGTreeNode.h */;
-		name = "PBGTreeNode.h: 24";
-		rLen = 0;
-		rLoc = 432;
-		rType = 0;
-		vrLen = 897;
-		vrLoc = 144;
-	};
 	CDBD70DB0DAB13E000653ACC /* PBGDefines.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {820, 586}}";
@@ -359,18 +322,18 @@
 	};
 	CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 742}}";
-			sepNavSelRange = "{705, 0}";
-			sepNavVisRange = "{178, 909}";
+			sepNavIntBoundsRect = "{{0, 0}, {904, 826}}";
+			sepNavSelRange = "{265, 0}";
+			sepNavVisRange = "{90, 647}";
 			sepNavWindowFrame = "{{447, 161}, {879, 714}}";
 		};
 	};
 	CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 6608}}";
-			sepNavSelRange = "{9207, 0}";
-			sepNavVisRange = "{8567, 1131}";
-			sepNavWindowFrame = "{{440, 116}, {879, 714}}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 6272}}";
+			sepNavSelRange = "{1181, 5}";
+			sepNavVisRange = "{1118, 1642}";
+			sepNavWindowFrame = "{{432, 107}, {879, 714}}";
 		};
 	};
 }

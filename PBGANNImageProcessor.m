@@ -11,12 +11,12 @@
 
 @implementation PBGANNImageProcessor
 
-+ (CIImage *)applyBrightness:(float)brightness andContrast:(float)contrast toCIImage:(CIImage *)i
++ (CIImage *)applyBrightness:(float)brightness contrast:(float)contrast pixellation:(float)pixellation toCIImage:(CIImage *)i
 {
 	CIFilter *effectFilter = [CIFilter filterWithName:@"CIPixellate"];
 	[effectFilter setDefaults];
 	[effectFilter setValue:i forKey:@"inputImage"];
-	[effectFilter setValue:[NSNumber numberWithFloat:10.0] forKey:@"inputScale"];
+	[effectFilter setValue:[NSNumber numberWithFloat:pixellation] forKey:@"inputScale"];
 	
 	CIFilter *colorAdjust = [CIFilter filterWithName:@"CIColorControls"];
 	[colorAdjust setDefaults];
@@ -26,6 +26,35 @@
 	[colorAdjust setValue:[NSNumber numberWithFloat:0.0] forKey:@"inputSaturation"];
 	
 	return [colorAdjust valueForKey:@"outputImage"];
+}
+
++ (NSArray *)arrayRepresentationOfImage:(CIImage *)image withPixellationFactor:(int)pixellation
+{
+	NSBitmapImageRep *pixel = [[NSBitmapImageRep alloc] initWithCIImage:image];
+	
+	NSSize size = [pixel size];
+	NSLog(@"Width: %f, Height: %f", size.width, size.height);
+	NSColor *averageColor;
+	NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:100];
+	int vertical, horizontal;
+	float components[4];
+	
+	for (vertical = 0; vertical <= size.height; vertical++) {
+		for (horizontal = 0; horizontal <= size.width; horizontal++) {
+			if (horizontal % (pixellation * 5) == 0 && vertical % (pixellation * 5) == 0) {
+				averageColor = [pixel colorAtX:horizontal y:vertical];
+				[averageColor getComponents:components];
+				
+				// They're all going to be the same
+				//NSLog(@"Adding %f / %f / %f / %f", components[0], components[1], components[2], components[3]);
+				
+				// Add the new image part to our array.
+				[array addObject:[[NSNumber alloc] initWithFloat:components[0]]];
+			}
+		}
+	}
+	
+	return array;
 }
 
 
