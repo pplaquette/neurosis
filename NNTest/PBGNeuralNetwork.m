@@ -141,7 +141,7 @@
 		
 		// Calculate the weight corrections
 		for (PBGWeightedConnection *connection in [currentNeuron inputConnectionsArray]){
-			double conValue = [connection outputValue];
+			double conValue = [[connection inputNeuron] outputValue];
 			double weightDelta = learningRate * conValue * errorGradient;
 			double newWeight = [connection weight] + weightDelta;
 			
@@ -163,14 +163,14 @@
 	
 	
 	NSArray *nextArrayForwards = outputsArray;
-	int j = 0;
+	i = 0;
 	
 	if (DEBUG_LOGGING)
 		NSLog(@" ----- Starting hidden layers section ------ ");
 	
-	for (j = [hiddenLayersArray count]; j > 0; j--){
+	for (i = [hiddenLayersArray count]; i > 0; i--){
 		
-		NSMutableArray *hiddenLayer = [hiddenLayersArray objectAtIndex:(j-1)];
+		NSMutableArray *hiddenLayer = [hiddenLayersArray objectAtIndex:(i-1)];
 			
 		for (PBGNeuron *currentNeuron in hiddenLayer){
 			
@@ -178,9 +178,9 @@
 				NSLog(@"Working on Neuron %@", currentNeuron);
 			
 			double sigmaOfWeights = 0;
-			i = 0;
-			for (i = 0; i < [nextArrayForwards count]; i++){
-				PBGNeuron *neuronToCheck = [nextArrayForwards objectAtIndex:i];
+			int j = 0;
+			for (j = 0; j < [nextArrayForwards count]; j++){
+				PBGNeuron *neuronToCheck = [nextArrayForwards objectAtIndex:j];
 				double errorGradientOfForwardNeuron = [neuronToCheck errorGradient];
 				sigmaOfWeights += (errorGradientOfForwardNeuron * [[neuronToCheck connectionToNeuron:currentNeuron] weight]);
 			}
