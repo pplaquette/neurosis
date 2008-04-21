@@ -25,4 +25,5 @@
 @property (assign) NSImage *image;
 @property (copy) NSString *meaning;
 
+- (void)addArrayRep:(NSArray *)a;
 @end

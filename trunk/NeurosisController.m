@@ -14,6 +14,7 @@
 #import "PBGTreeNode.h"
 #import "PBGLesson.h"
 
+#include <stdlib.h>
 
 #define kMinOutlineViewSplit		125.0f
 #define kSourcesColumnIdentifier	@"SOURCES"
@@ -47,6 +48,8 @@
 - (void)awakeFromNib
 {
 	[[NSApplication sharedApplication] setDelegate:self];
+	
+	[self setResolution:10.0];
 	
 	// Apply our custom ImageAndTextCell for rendering the first column's cells
 	NSTableColumn *tableColumn = [sourceListView tableColumnWithIdentifier:kSourcesColumnIdentifier];
@@ -100,7 +103,50 @@
 						   selector:@selector(handleNewPicture:) 
 							   name:kPictureTakenNotification 
 							 object:nil];
+	
 }
+
+#pragma mark - IBActions
+
+- (IBAction)runNewANNSheet:(id)sender
+{
+    [NSApp beginSheet:newANNSheet modalForWindow:window modalDelegate:self didEndSelector:NULL contextInfo:nil];
+}
+
+- (IBAction)cancelNewANNSheet:(id)sender
+{
+    [newANNSheet orderOut:nil];
+    [NSApp endSheet:newANNSheet];
+}
+
+- (IBAction)createNewNeuralNetwork:(id)sender
+{
+	// Create a dictionary with the info we need
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:1];
+	[dict setObject:[NSNumber numberWithDouble:resolution] forKey:kResolutionIdentifier];
+	
+	// Make our notification here.
+	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+	[notificationCenter postNotificationName:kResolutionChangedNotification object:dict];
+	
+	NSLog(@"Posting note with object:%@", dict);
+	
+	if(!network) { [network release]; }
+	
+	double height = [cameraController vElements];
+	double width = [cameraController hElements];
+	
+	NSLog(@"Creating new neural net with size: %f", (width * height));
+	
+	network = [[PBGNeuralNetwork alloc] initWithInputs:(width * height)
+											   outputs:2
+										  hiddenLayers:1];
+	//[network printDescription];
+	
+    [newANNSheet orderOut:nil];
+    [NSApp endSheet:newANNSheet];
+}
+
 
 #pragma mark - Notification Handling
 
@@ -117,6 +163,8 @@
 	// Create our new lesson
 	PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
 														meaning:lessonMeaning];
+	
+	[newLesson addArrayRep:[[notification object] valueForKey:kImageAsArrayIdentifier]];
 	
 	PBGTreeNode *lessonNode = [[PBGTreeNode alloc] initWithNodeType:LessonTreeNode
 														  nodeTitle:lessonMeaning
@@ -144,6 +192,10 @@
 		[self addNode:lessonNode atIndex:[NSNumber numberWithInt:index]];
 	}
 
+	// Train out network
+	// 
+	[network setStartingValues:newLesson.imageAsArray];
+	[network learnFromExpectedOutputs:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil]];
 
 }
 
@@ -224,6 +276,12 @@
 
 #pragma mark - Application Delegate
 
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+	if (network == NULL)
+		[self runNewANNSheet:NULL];
+}
+
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
 	return YES;
@@ -267,6 +325,16 @@
 }
 
 #pragma mark - KVC
+
+- (double)resolution
+{
+	return resolution;
+}
+
+- (void)setResolution:(double)r
+{
+	resolution = r;
+}
 
 - (void)setContents:(NSArray*)newContents
 {

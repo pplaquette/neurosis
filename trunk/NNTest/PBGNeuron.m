@@ -141,7 +141,7 @@
 	}
 	
 	if (usingThreshold)
-		sigma = sigma + (-1 * threshold);
+		sigma += -1 * threshold;
 	
 	switch (activationFunction) {
 		default:
@@ -163,6 +163,10 @@
 			
 		case PBGSigmoidFunction:
 			value = 1/(1+exp(-sigma));
+			break;
+			
+		case PBGSigmoidFunctionHyperbolic:
+			value = (2 * 1.716)/(1+exp(-sigma * 0.667)) - 1.716;
 			break;
 			
 		case PBGLinearFunction:

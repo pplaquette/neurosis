@@ -14,6 +14,7 @@ enum PBGActivationFunction	{
 	PBGSignFunction,
 	PBGStepFunction,
 	PBGSigmoidFunction,
+	PBGSigmoidFunctionHyperbolic,
 	PBGLinearFunction
 };
 

@@ -17,7 +17,7 @@
 	self = [super init];
 	if (self != nil) {
 		neuronCounter = 0;
-		learningRate = 0.1;
+		learningRate = 0.01;
 		srand( time(NULL) );
 		double high = 2.4 / inputCount;
 		double low = -2.4 / inputCount;
@@ -198,7 +198,8 @@
 			
 			// Calculate the weight corrections
 			for (PBGWeightedConnection *connection in [currentNeuron inputConnectionsArray]){
-				double errorDelta = learningRate * errorGradient * [[connection inputNeuron] outputValue];
+				double inputValue = [[connection inputNeuron] outputValue];
+				double errorDelta = learningRate * errorGradient * inputValue;
 				double newWeight = [connection weight] + errorDelta;
 				
 				if (DEBUG_LOGGING)

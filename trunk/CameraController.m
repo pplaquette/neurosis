@@ -11,9 +11,23 @@
 
 @implementation CameraController
 
-- (void)awakeFromNib 
+- (void)awakeFromNib
 { 
-	iprocessor = [[PBGANNImageProcessor alloc] initWithHorizontalElements:40 verticalElements:40];
+	
+	resolution = 10.0;
+	
+	hElements = (double) 640 / resolution;
+	vElements = (double) 480 / resolution;
+	
+	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+	[notificationCenter addObserver:self 
+						   selector:@selector(updateResolution:) 
+							   name:kResolutionChangedNotification 
+							 object:nil];
+	
+	NSLog(@"Creating iprocessor with dimensions: %f x %f", hElements, vElements);
+	
+	iprocessor = [[PBGANNImageProcessor alloc] initWithHorizontalElements:hElements verticalElements:vElements];
 	[self setValue:[NSNumber numberWithFloat:1.2] forKey:@"contrast"];
 	
 	//Create the capture session
@@ -60,6 +74,30 @@
 	
 }
 
+-(double)hElements
+{
+	return hElements;
+}
+
+-(double)vElements
+{
+	return vElements;
+}
+
+- (void)updateResolution:(NSNotification *)note
+{
+	NSLog(@"Updating resolution");
+	resolution = [[[note object] valueForKey:kResolutionIdentifier] doubleValue];
+		
+	hElements = 640 / resolution;
+	vElements = 480 / resolution;
+	
+	NSLog(@"Creating iprocessor with dimensions: %f x %f", hElements, vElements);
+	
+	if (iprocessor) { [iprocessor release]; }
+	iprocessor = [[PBGANNImageProcessor alloc] initWithHorizontalElements:hElements verticalElements:vElements];
+}
+
 - (void)windowWillClose:(NSNotification *)notification 
 { 
 	[[mCaptureDeviceInput device] close];
@@ -82,7 +120,7 @@
 
 - (CIImage *)view:(QTCaptureView *)view willDisplayImage:(CIImage *)i
 {
-	return [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:10 toCIImage:i];
+	return [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:resolution toCIImage:i];
 }
 
 
@@ -97,12 +135,9 @@
 	}
 	
 	CIImage *capturedImage = [CIImage imageWithCVImageBuffer:imageBuffer];
-	capturedImage = [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:10 toCIImage:capturedImage];
+	capturedImage = [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:resolution toCIImage:capturedImage];
 
-	NSArray *test = [PBGANNImageProcessor arrayRepresentationOfImage:capturedImage withPixellationFactor:10];
-	NSLog(@"Test size: %d", [test count]);
-	[test release];
-	
+	NSArray *imageAsArray = [PBGANNImageProcessor arrayRepresentationOfImage:capturedImage withPixellationFactor:resolution];
 	
 	NSCIImageRep *imageRep = [NSCIImageRep imageRepWithCIImage:capturedImage];
 	NSImage *image = [[NSImage alloc] initWithSize:[imageRep size]];
@@ -142,6 +177,7 @@
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
 	[dict setObject:originalFileName forKey:kMeaningIdentifier];
 	[dict setObject:fullFilePath forKey:kFilePathIdentifier];
+	[dict setObject:imageAsArray forKey:kImageAsArrayIdentifier];
 	
 	// Make our notification here.
 	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];

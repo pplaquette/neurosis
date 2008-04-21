@@ -3,7 +3,7 @@
 //  neurosis
 //
 //  Created by Patrick B. Gibson on 27/10/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Patrick B. Gibson. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -12,6 +12,8 @@
 @interface PBGNeuralNetwork : NSObject {
 	int				neuronCounter;
 	double			learningRate;
+	
+	double			sumSquredError;
 
 	NSMutableArray	*hiddenLayersArray;
 	NSMutableArray	*inputsArray;
