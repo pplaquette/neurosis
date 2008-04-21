@@ -27,9 +27,15 @@
 	return self;
 }
 
+- (void)addArrayRep:(NSArray *)a
+{
+	imageAsArray = [a retain];
+}
+
 
 - (void)dealloc
 {
+	if (imageAsArray) { [imageAsArray release]; }
 	[image release];
 	[imagePath release];
 	[meaning release];

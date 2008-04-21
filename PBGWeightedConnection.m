@@ -3,7 +3,7 @@
 //  neurosis
 //
 //  Created by Patrick B. Gibson on 27/10/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Patrick B. Gibson. All rights reserved.
 //
 
 #import "PBGWeightedConnection.h"
@@ -48,7 +48,9 @@
 
 - (void)updateNow
 {
-	NSLog(@"Updating %@ to %f", self, newWeight);
+	if (DEBUG_LOGGING)
+		NSLog(@"Updating %@ to %f", self, newWeight);
+	
 	weight = newWeight;
 	[inputNeuron updateNow];
 }

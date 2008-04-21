@@ -3,7 +3,7 @@
 //  neurosis
 //
 //  Created by Patrick B. Gibson on 27/10/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Patrick B. Gibson. All rights reserved.
 //
 
 #import "PBGNeuron.h"
@@ -51,7 +51,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"%d", neuronID];
+	return [NSString stringWithFormat:@"(%d)", neuronID];
 }
 
 - (void)addInputConnection:(PBGWeightedConnection *)connection
@@ -97,6 +97,9 @@
 
 - (void)updateNow
 {
+	if (DEBUG_LOGGING)
+		NSLog(@"%@ Updating...", self);
+		
 	[self setThreshold:newThreshold];
 	
 	for (PBGWeightedConnection *connection in inputConnectionsArray) {
@@ -138,7 +141,7 @@
 	}
 	
 	if (usingThreshold)
-		sigma = sigma - threshold;
+		sigma += -1 * threshold;
 	
 	switch (activationFunction) {
 		default:
@@ -162,12 +165,17 @@
 			value = 1/(1+exp(-sigma));
 			break;
 			
+		case PBGSigmoidFunctionHyperbolic:
+			value = (2 * 1.716)/(1+exp(-sigma * 0.667)) - 1.716;
+			break;
+			
 		case PBGLinearFunction:
 			value = sigma;
 			break;
 	}
 	
-	NSLog(@"Neuron %@ is returning value of %f", self, value);
+	if (DEBUG_LOGGING)
+		NSLog(@"Neuron %@ is returning value of %f", self, value);
 	
 	return value;
 }

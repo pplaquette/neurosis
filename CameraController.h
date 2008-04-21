@@ -23,10 +23,16 @@
 	
 	float								contrast;
 	float								brightness;
+	double								resolution;
+	double								hElements;
+	double								vElements;
 	
 	PBGANNImageProcessor				*iprocessor;
 }
 
 - (IBAction)takePicture:(id)sender;
+
+-(double)hElements;
+-(double)vElements;
 
 @end

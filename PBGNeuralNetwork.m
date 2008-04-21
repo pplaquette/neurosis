@@ -3,7 +3,7 @@
 //  neurosis
 //
 //  Created by Patrick B. Gibson on 27/10/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Patrick B. Gibson. All rights reserved.
 //
 
 #import "PBGNeuralNetwork.h"
@@ -17,10 +17,10 @@
 	self = [super init];
 	if (self != nil) {
 		neuronCounter = 0;
-		learningRate = 0.1;
+		learningRate = 0.01;
 		srand( time(NULL) );
-		double high = 2.4 / (inputCount * hiddenLayersCount + outputCount);
-		double low = -2.4 / (inputCount * hiddenLayersCount + outputCount);
+		double high = 2.4 / inputCount;
+		double low = -2.4 / inputCount;
 		
 		int i, j; // Counters for various looping
 	
@@ -28,7 +28,7 @@
 		inputsArray = [[NSMutableArray alloc] initWithCapacity:inputCount];
 		for (i = 0; i < inputCount; i++){
 			PBGNeuron *newNeuron = [[PBGNeuron alloc] initWithID:neuronCounter++ 
-													 networkSize:(inputCount * hiddenLayersCount + outputCount)
+													 networkSize:inputCount
 													   threshold:NO];
 			[inputsArray addObject:newNeuron];
 		}
@@ -47,7 +47,7 @@
 			// After creating the new hidden layer, fill it with neurons, connecting each neuron to every input neuron.
 			for (j = 0; j < inputCount; j++){
 				PBGNeuron *newNeuron = [[PBGNeuron alloc] initWithID:neuronCounter++ 
-														 networkSize:(inputCount * hiddenLayersCount + outputCount)
+														 networkSize:inputCount
 														   threshold:YES];
 				
 				for (PBGNeuron *inputNeuron in previousLayerArray) {
@@ -60,7 +60,9 @@
 																	   weight:weight
 																   adjustable:YES];
 										
-					NSLog(@"Adding connection %@ to neuron %@", connection, newNeuron);
+					if (DEBUG_LOGGING)
+						NSLog(@"Adding connection %@ to neuron %@", connection, newNeuron);
+					
 					[newNeuron addInputConnection:connection];
 				} // Finish adding connections to new neuron
 				
@@ -79,7 +81,7 @@
 		outputsArray = [[NSMutableArray alloc] initWithCapacity:outputCount];
 		for (i = 0; i < outputCount; i++){
 			PBGNeuron *newNeuron = [[PBGNeuron alloc] initWithID:neuronCounter++ 
-													 networkSize:(inputCount * hiddenLayersCount + outputCount)
+													 networkSize:inputCount
 													   threshold:YES];
 			
 			for (PBGNeuron *inputNeuron in previousLayerArray) {
@@ -91,7 +93,8 @@
 																	   weight:weight
 																   adjustable:YES];
 				
-					NSLog(@"Adding connection %@ to neuron %@", connection, newNeuron);
+					if (DEBUG_LOGGING)
+						NSLog(@"Adding connection %@ to neuron %@", connection, newNeuron);
 				
 					[newNeuron addInputConnection:connection];
 				} // Finish adding connections to new neuron
@@ -99,7 +102,6 @@
 			[outputsArray addObject:newNeuron];
 		} // Finish creating the output layer
 		
-		[self printDescription];
 	} // End creation of self
 	return self;
 }
@@ -124,71 +126,95 @@
 	[self computeOutputValues];
 	int i = 0;
 	
-	NSLog(@" ----- Starting ouput layers section ------ ");
+	if (DEBUG_LOGGING)
+		NSLog(@" ----- Starting ouput layers section ------ ");
 	
-	// ---------------- Output layer -----------------
 	for (PBGNeuron *currentNeuron in outputsArray){
+		
+		if (DEBUG_LOGGING)
+			NSLog(@"Working on Neuron %@", currentNeuron);
 		
 		double errorGradient = [currentNeuron errorGradientUsingExpectedOutput:[[expectedOutputs objectAtIndex:i++] doubleValue]];
 				
-		NSLog(@"Error gradient for %@ is %f", currentNeuron, errorGradient);
+		if (DEBUG_LOGGING)
+			NSLog(@"Error gradient is %f", errorGradient);
 		
 		// Calculate the weight corrections
 		for (PBGWeightedConnection *connection in [currentNeuron inputConnectionsArray]){
-			double conValue = [connection outputValue];
+			double conValue = [[connection inputNeuron] outputValue];
 			double weightDelta = learningRate * conValue * errorGradient;
 			double newWeight = [connection weight] + weightDelta;
-			NSLog(@"Neuron %@ has connection from %@ with weight %f. Will apply weight delta %f.", 
-				  currentNeuron, [connection inputNeuron], [connection weight], weightDelta);
+			
+			if (DEBUG_LOGGING)
+				NSLog(@"Connection from %@ with weight %f. Will apply weight delta %f.", 
+				  [connection inputNeuron], [connection weight], weightDelta);
+			
 			// Update the weights going to the output neurons
 			[connection setNewWeight:newWeight];
 		}
 		
 		double thresholdErrorDelta = learningRate * -1 * errorGradient;
-		NSLog(@"Changing threshold in %@ from %f to %f", currentNeuron, [currentNeuron threshold], [currentNeuron threshold] + thresholdErrorDelta);
+		
+		if (DEBUG_LOGGING)
+			NSLog(@"Changing threshold from %f to %f", [currentNeuron threshold], [currentNeuron threshold] + thresholdErrorDelta);
+		
 		[currentNeuron setNewThreshold:(thresholdErrorDelta + [currentNeuron threshold])];
 	}	
 	
 	
 	NSArray *nextArrayForwards = outputsArray;
-	int j = 0;
+	i = 0;
 	
-	NSLog(@" ----- Starting hidden layers section ------ ");
+	if (DEBUG_LOGGING)
+		NSLog(@" ----- Starting hidden layers section ------ ");
 	
-	for (j = [hiddenLayersArray count]; j > 0; j--){
+	for (i = [hiddenLayersArray count]; i > 0; i--){
 		
-		NSMutableArray *hiddenLayer = [hiddenLayersArray objectAtIndex:(j-1)];
+		NSMutableArray *hiddenLayer = [hiddenLayersArray objectAtIndex:(i-1)];
 			
 		for (PBGNeuron *currentNeuron in hiddenLayer){
+			
+			if (DEBUG_LOGGING)
+				NSLog(@"Working on Neuron %@", currentNeuron);
+			
 			double sigmaOfWeights = 0;
-			i = 0;
-			for (i = 0; i < [nextArrayForwards count]; i++){
-				PBGNeuron *neuronToCheck = [nextArrayForwards objectAtIndex:i];
+			int j = 0;
+			for (j = 0; j < [nextArrayForwards count]; j++){
+				PBGNeuron *neuronToCheck = [nextArrayForwards objectAtIndex:j];
 				double errorGradientOfForwardNeuron = [neuronToCheck errorGradient];
 				sigmaOfWeights += (errorGradientOfForwardNeuron * [[neuronToCheck connectionToNeuron:currentNeuron] weight]);
 			}
 			
-			NSLog(@"sigma of weights: %f", sigmaOfWeights);
+			if (DEBUG_LOGGING)
+				NSLog(@"Sigma of weights is %f", sigmaOfWeights);
 			
 			double currentValue = [currentNeuron outputValue];
 			double errorGradient = currentValue * (1 - currentValue) * sigmaOfWeights;
 			
 			[currentNeuron setErrorGradient:errorGradient];
 			
-			NSLog(@"Error gradient for %@ is %f", currentNeuron, errorGradient);
+			if (DEBUG_LOGGING)
+				NSLog(@"Error gradient is %f", errorGradient);
 			
 			// Calculate the weight corrections
 			for (PBGWeightedConnection *connection in [currentNeuron inputConnectionsArray]){
-				double errorDelta = learningRate * errorGradient * [connection outputValue];
+				double inputValue = [[connection inputNeuron] outputValue];
+				double errorDelta = learningRate * errorGradient * inputValue;
 				double newWeight = [connection weight] + errorDelta;
-				NSLog(@"Neuron %@ has connection from %@ with weight %f. Will apply error delta %f.", 
-					  currentNeuron, [connection inputNeuron], [connection weight], errorDelta);
+				
+				if (DEBUG_LOGGING)
+					NSLog(@"Connection from %@ with weight %f. Will apply error delta %f.", 
+					  [connection inputNeuron], [connection weight], errorDelta);
+				
 				// Update the weights going to the output neurons
 				[connection setNewWeight:newWeight];
 			}
 			
 			double thresholdErrorDelta = learningRate * -1 * errorGradient;
-			NSLog(@"Changing threshold in %@ from %f to %f", currentNeuron, [currentNeuron threshold], [currentNeuron threshold] + thresholdErrorDelta);
+			
+			if (DEBUG_LOGGING)
+				NSLog(@"Changing threshold in %@ from %f to %f", currentNeuron, [currentNeuron threshold], [currentNeuron threshold] + thresholdErrorDelta);
+			
 			[currentNeuron setNewThreshold:(thresholdErrorDelta + [currentNeuron threshold])];
 		
 		} // End each neuron in this layer
@@ -196,25 +222,11 @@
 		nextArrayForwards = hiddenLayer;
 	}
 	
-	[self printDescription];
-	
 	for (PBGNeuron *neuron in outputsArray) {
 		[neuron updateNow];
 	}
-	
-	double sigmaOfError = 0;
-	int z = 0;
-	
-	for (PBGNeuron *neuron in outputsArray) {
-		sigmaOfError += pow(([[expectedOutputs objectAtIndex:z++] doubleValue] - [neuron outputValue]), 2);
-	}
-	
-	NSLog(@"Mean squared error: %f", sigmaOfError);
-	
-	//if (sigmaOfError > 0.25)
-	//	[self learnFromExpectedOutputs:expectedOutputs];
-	
 }
+
 
 - (NSArray *)computeOutputValues
 {
@@ -223,7 +235,8 @@
 		[computedOutputValues addObject:[NSNumber numberWithDouble:[outputNeuron outputValue]]];
 	}
 	
-	NSLog(@"Output values will be: %@", computedOutputValues);
+	if (DEBUG_LOGGING)
+		NSLog(@"Output values will be: %@", computedOutputValues);
 	
 	return computedOutputValues;
 }

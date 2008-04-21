@@ -17,6 +17,7 @@
 	[effectFilter setDefaults];
 	[effectFilter setValue:i forKey:@"inputImage"];
 	[effectFilter setValue:[NSNumber numberWithFloat:pixellation] forKey:@"inputScale"];
+	[effectFilter setValue:[CIVector vectorWithX:0 Y:0] forKey:@"inputCenter"];
 	
 	CIFilter *colorAdjust = [CIFilter filterWithName:@"CIColorControls"];
 	[colorAdjust setDefaults];

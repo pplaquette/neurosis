@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "PBGNeuralNetwork.h"
 
+#define ZERO 0
+#define ONE 1
+
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
@@ -9,17 +12,17 @@ int main (int argc, const char * argv[]) {
 	PBGNeuralNetwork *neuralNet = [[PBGNeuralNetwork alloc] initWithInputs:inputSize outputs:1 hiddenLayers:1];
 	
 	NSMutableArray *zeroZeroArray = [[NSMutableArray alloc] initWithCapacity:inputSize];
-	[zeroZeroArray addObject:[NSNumber numberWithDouble:0.000001]];
-	[zeroZeroArray addObject:[NSNumber numberWithDouble:0.000001]];
+	[zeroZeroArray addObject:[NSNumber numberWithDouble:ZERO]];
+	[zeroZeroArray addObject:[NSNumber numberWithDouble:ZERO]];
 	NSMutableArray *zeroOneArray = [[NSMutableArray alloc] initWithCapacity:inputSize];
-	[zeroOneArray addObject:[NSNumber numberWithDouble:0.000001]];
-	[zeroOneArray addObject:[NSNumber numberWithDouble:0.999999]];
+	[zeroOneArray addObject:[NSNumber numberWithDouble:ZERO]];
+	[zeroOneArray addObject:[NSNumber numberWithDouble:ONE]];
 	NSMutableArray *oneZeroArray = [[NSMutableArray alloc] initWithCapacity:inputSize];
-	[oneZeroArray addObject:[NSNumber numberWithDouble:0.999999]];
-	[oneZeroArray addObject:[NSNumber numberWithDouble:0.000001]];
+	[oneZeroArray addObject:[NSNumber numberWithDouble:ONE]];
+	[oneZeroArray addObject:[NSNumber numberWithDouble:ZERO]];
 	NSMutableArray *oneOneArray = [[NSMutableArray alloc] initWithCapacity:inputSize];
-	[oneOneArray addObject:[NSNumber numberWithDouble:0.999999]];
-	[oneOneArray addObject:[NSNumber numberWithDouble:0.999999]];
+	[oneOneArray addObject:[NSNumber numberWithDouble:ONE]];
+	[oneOneArray addObject:[NSNumber numberWithDouble:ONE]];
 	 
 	double sumSquaredError = 100;
 	int i = 1;
@@ -28,26 +31,26 @@ int main (int argc, const char * argv[]) {
 	
 	[neuralNet printDescription];
 	
-	while (sumSquaredError > 0.01) {
+	while (sumSquaredError > 0.001) {
 		[neuralNet setStartingValues:zeroZeroArray];
-		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:0.000001]]];
+		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:ZERO]]];
 		double foo1 = [[[neuralNet computeOutputValues] objectAtIndex:0] doubleValue];
-		error1 = 0.000001 - foo1;
+		error1 = ZERO - foo1;
 		
 		[neuralNet setStartingValues:zeroOneArray];
-		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:0.999999]]];
+		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:ONE]]];
 		double foo2 = [[[neuralNet computeOutputValues] objectAtIndex:0] doubleValue];
-		error2 = 0.999999 - foo2;
+		error2 = ONE - foo2;
 		
 		[neuralNet setStartingValues:oneZeroArray];
-		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:0.999999]]];
+		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:ONE]]];
 		double foo3 = [[[neuralNet computeOutputValues] objectAtIndex:0] doubleValue];
-		error3 = 0.999999 - foo3;
+		error3 = ONE - foo3;
 		
 		[neuralNet setStartingValues:oneOneArray];
-		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:0.000001]]];
+		[neuralNet learnFromExpectedOutputs:[NSArray arrayWithObject:[NSNumber numberWithDouble:ZERO]]];
 		double foo4 = [[[neuralNet computeOutputValues] objectAtIndex:0] doubleValue];
-		error4 = 0.000001 - foo4;
+		error4 = ZERO - foo4;
 		
 		i++;
 		

@@ -8,9 +8,14 @@
  */
 
 // Notifications
-#define kPictureTakenNotification	@"PBGPictureTakenNotification"
-#define kMeaningIdentifier			@"PBGMeaningIdentifier"
-#define kFilePathIdentifier			@"PBGFilePathIdentifier"
+#define kPictureTakenNotification		@"PBGPictureTakenNotification"
+#define kResolutionChangedNotification	@"PBGResolutionChangedNotification"
+
+#define kMeaningIdentifier				@"PBGMeaningIdentifier"
+#define kFilePathIdentifier				@"PBGFilePathIdentifier"
+#define kResolutionIdentifier			@"PBGResolutionIdentifier"
+#define kImageAsArrayIdentifier			@"PBGImageAsArrayIdentifier"
+
 
 // PBGTreeNode Types
 typedef enum _PBGTreeNodeType {

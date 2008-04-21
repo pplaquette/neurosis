@@ -18,13 +18,15 @@
 
 @interface NeurosisController : NSObject {
 	
+	IBOutlet NSWindow			*window;
+	IBOutlet NSPanel			*newANNSheet;
+	
 	IBOutlet NSSplitView		*splitView;
 	IBOutlet NSView				*mainView;
 	IBOutlet NSView				*cameraView;
 	IBOutlet NSView				*lessonView;
 	
 	IBOutlet NSView				*currentView;
-	
 	
 	IBOutlet NSOutlineView		*sourceListView;
 	
@@ -35,8 +37,8 @@
 
 	NSMutableArray				*contents;
 	
-	PBGNeuralNetwork			*neuralNetwork;
-	float						resolution;
+	PBGNeuralNetwork			*network;
+	double						resolution;
 	
 	PBGSeparatorCell			*separatorCell;
 	
@@ -44,8 +46,13 @@
 	NSImage						*photoIconImage;
 }
 
+- (IBAction)createNewNeuralNetwork:(id)sender;
+
 - (void)setContents:(NSArray*)newContents;
 - (NSMutableArray*)contents;
+
+- (double)resolution;
+- (void)setResolution:(double)r;
 
 - (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex;
 
