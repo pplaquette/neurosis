@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>CDBFAD4B0DBD3E3300A793A7</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>PBGNeuralNetwork.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>CDBFAD4C0DBD3E3300A793A7</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>PBGNeuralNetwork.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>CDBFAD4D0DBD3E3300A793A7</string>
+						<key>history</key>
+						<array>
+							<string>CDBFAD480DBD3E1600A793A7</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {879, 617}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>462 113 879 658 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -296,7 +337,7 @@
 							<real>239</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>223 472 690 397 0 0 1440 878 </string>
+						<string>746 472 690 397 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -333,7 +374,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {429, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>223 472 690 397 0 0 1440 878 </string>
+								<string>746 472 690 397 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -355,7 +396,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {429, 351}}</string>
 								<key>RubberWindowFrame</key>
-								<string>223 472 690 397 0 0 1440 878 </string>
+								<string>746 472 690 397 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -379,9 +420,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CDBFAB010DBB063300A793A7</string>
+				<string>CDBFAD430DBD3E0100A793A7</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CDBFAB020DBB063300A793A7</string>
+				<string>CDBFAD440DBD3E0100A793A7</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -515,19 +556,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CDBFAB7B0DBBA38700A793A7</string>
-		<string>CDBFAB770DBBA38700A793A7</string>
-		<string>CDBFAB6B0DBBA1A800A793A7</string>
-		<string>CDBFAB090DBB063300A793A7</string>
-		<string>CDBFAB0A0DBB063300A793A7</string>
-		<string>CDBFAB060DBB063300A793A7</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>CDBFA9300DBAA07B00A793A7</string>
+		<string>CDBFAD450DBD3E0100A793A7</string>
 		<string>/Users/patrick/Desktop/neurosis/NNTest/NNTest.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>223 472 690 397 0 0 1440 878 </string>
+	<string>746 472 690 397 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

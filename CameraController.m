@@ -13,6 +13,7 @@
 
 - (void)awakeFromNib
 { 
+	lastFrame = [[CIImage alloc] init];
 	
 	resolution = 10.0;
 	
@@ -120,10 +121,22 @@
 
 - (CIImage *)view:(QTCaptureView *)view willDisplayImage:(CIImage *)i
 {
-	return [PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:resolution toCIImage:i];
+	[lastFrame release];
+	lastFrame = [[PBGANNImageProcessor applyBrightness:brightness contrast:contrast pixellation:resolution toCIImage:i] retain];
+	return lastFrame;
 }
 
 
+- (CIImage *)grabFrame
+{
+	return lastFrame;
+}
+
+- (IBAction)recognize:(id)sender
+{
+	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+	[notificationCenter postNotificationName:kRecognizeImageNotification object:nil];
+}
 
 - (IBAction)takePicture:(id)sender
 {
@@ -192,6 +205,7 @@
 
 - (void)dealloc
 {
+	[lastFrame release];
     [mCaptureSession release];
     [mCaptureDeviceInput release];
     [mRawVideoOutput release];

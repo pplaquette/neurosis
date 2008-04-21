@@ -15,7 +15,7 @@
 @synthesize image;
 @synthesize meaning;
 
-- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m
+- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m index:(int)i
 {
 	self = [super init];
 	if (self != nil) {
@@ -31,7 +31,6 @@
 {
 	imageAsArray = [a retain];
 }
-
 
 - (void)dealloc
 {

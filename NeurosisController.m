@@ -33,6 +33,7 @@
 {
 	self = [super init];
 	if (self != nil) {
+		lessonCount = 0;
 		contents = [[NSMutableArray alloc] init];
 		
 		// Get the images for our camera and for our images
@@ -104,6 +105,11 @@
 							   name:kPictureTakenNotification 
 							 object:nil];
 	
+	[notificationCenter addObserver:self 
+						   selector:@selector(reconizeImage:) 
+							   name:kRecognizeImageNotification 
+							 object:nil];
+	
 }
 
 #pragma mark - IBActions
@@ -147,6 +153,16 @@
     [NSApp endSheet:newANNSheet];
 }
 
+- (IBAction)reconizeImage:(id)sender
+{
+	CIImage *image = [[cameraController grabFrame] retain];
+	NSArray *values = [PBGANNImageProcessor arrayRepresentationOfImage:image withPixellationFactor:resolution];
+	[network setStartingValues:values];
+	NSArray *outputs = [network computeOutputValues];
+	NSLog(@"Outputs were: %@", outputs);
+	[image release];
+	[values release];
+}
 
 #pragma mark - Notification Handling
 
@@ -162,7 +178,8 @@
 	
 	// Create our new lesson
 	PBGLesson *newLesson = [[PBGLesson alloc] initWithImagePath:[[notification object] valueForKey:kFilePathIdentifier] 
-														meaning:lessonMeaning];
+														meaning:lessonMeaning
+														  index:lessonCount++];
 	
 	[newLesson addArrayRep:[[notification object] valueForKey:kImageAsArrayIdentifier]];
 	
@@ -174,7 +191,8 @@
 	if (index < 0) { // Create a new tree folder
 		PBGTreeNode *folderNode = [[PBGTreeNode alloc] initWithNodeType:LessonFolderTreeNode
 														   nodeTitle:lessonMeaning
-														 andNodeIcon:photoIconImage];
+														 andNodeIcon:photoIconImage
+															andIndex:lessonCount++];
 				
 		
 		// Add our new folder to the tree and our lesson to that folder
@@ -185,18 +203,74 @@
 		int foo = [[[contents objectAtIndex:1] children] indexOfObject:folderNode];
 		[self addNode:lessonNode atIndex:[NSNumber numberWithInt:foo]];
 		
+		
+		//[self trainUntilSmartForLesson:folderNode];
+		
 	} else { // Add to an existing lesson
 		NSMutableArray *education = (NSMutableArray *) [[contents objectAtIndex:1] children];
 		int count = [[[education objectAtIndex:index] children] count];
 		[lessonNode setNodeTitle:[lessonMeaning stringByAppendingFormat:@" %d", (count + 1), nil]];
 		[self addNode:lessonNode atIndex:[NSNumber numberWithInt:index]];
+		
+		//[self trainUntilSmartForLesson:[education objectAtIndex:index]];
 	}
 
-	// Train out network
-	// 
-	[network setStartingValues:newLesson.imageAsArray];
-	[network learnFromExpectedOutputs:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil]];
+	[self trainUntilSmart];
 
+}
+
+- (void)trainUntilSmart
+{
+	NSMutableArray *education = (NSMutableArray *) [[contents objectAtIndex:1] children];
+	double sumSquaredError = 1;
+	
+	while (sumSquaredError > 0.2) {
+		NSLog(@"sumSquared: %f", sumSquaredError);
+		double error = 0;
+		for (PBGTreeNode *folderNode in education) {
+			NSArray *expectedOuts = [folderNode expectedOutputsArray];
+			
+			for (PBGTreeNode *lessonNode in [folderNode children]) {
+				
+				PBGLesson *lesson = [lessonNode lesson];
+				[network setStartingValues:lesson.imageAsArray];
+				
+				[network learnFromExpectedOutputs:expectedOuts];
+				
+				double out1, out2;
+				NSArray *realOuts = [network computeOutputValues];
+				out1 = [[realOuts objectAtIndex:0] doubleValue];
+				out1 = [[expectedOuts objectAtIndex:0] intValue] - out1;
+				out2 = [[realOuts objectAtIndex:1] doubleValue];
+				out2 = [[expectedOuts objectAtIndex:1] intValue] - out2;
+				error += pow(out1, 2) + pow(out2, 2);
+			}
+		}
+		sumSquaredError = error;
+	}
+}
+- (void)trainUntilSmartForLesson:(PBGTreeNode *)lessonFolder
+{
+	double sumSquaredError = 100;
+	
+	double out1, out2;
+	NSArray *expectOuts = [lessonFolder expectedOutputsArray];
+	
+	PBGTreeNode *node = [lessonFolder childAtIndex:0];
+	
+	PBGLesson *lesson = [node lesson];
+	[network setStartingValues:lesson.imageAsArray];
+	
+	while (sumSquaredError > 0.1) {
+			NSLog(@"Testing: %f", sumSquaredError);
+			
+			[network learnFromExpectedOutputs:expectOuts];
+			out1 = [[[network computeOutputValues] objectAtIndex:0] doubleValue];
+			out1 = [[expectOuts objectAtIndex:0] intValue] - out1;
+			out2 = [[[network computeOutputValues] objectAtIndex:1] doubleValue];
+			out2 = [[expectOuts objectAtIndex:1] intValue] - out2;
+			sumSquaredError = pow(out1, 2) + pow(out2, 2);
+	}
 }
 
 - (int)containsExistingLessonOf:(NSString *)thing

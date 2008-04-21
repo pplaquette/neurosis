@@ -83,8 +83,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 230357479;
-			PBXWorkspaceStateSaveDate = 230357479;
+			PBXPerProjectTemplateStateSaveDate = 230505974;
+			PBXWorkspaceStateSaveDate = 230505974;
+		};
+		perUserProjectItems = {
+			CDBFAD420DBD3DF900A793A7 /* PBXBookmark */ = CDBFAD420DBD3DF900A793A7 /* PBXBookmark */;
+			CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */ = CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */;
+			CDBFAD480DBD3E1600A793A7 /* PBXBookmark */ = CDBFAD480DBD3E1600A793A7 /* PBXBookmark */;
+			CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */ = CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CDBFA90F0DBA9ED300A793A7 /* Source Control */;
 		userBuildSettings = {
@@ -92,9 +98,9 @@
 	};
 	08FB7796FE84155DC02AAC07 /* NNTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {678, 1414}}";
-			sepNavSelRange = "{253, 0}";
-			sepNavVisRange = "{93, 684}";
+			sepNavIntBoundsRect = "{{0, 0}, {820, 1344}}";
+			sepNavSelRange = "{2380, 88}";
+			sepNavVisRange = "{79, 1990}";
 			sepNavWindowFrame = "{{337, 146}, {879, 714}}";
 		};
 	};
@@ -145,9 +151,9 @@
 	};
 	CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {820, 4102}}";
-			sepNavSelRange = "{236, 0}";
-			sepNavVisRange = "{0, 1275}";
+			sepNavIntBoundsRect = "{{0, 0}, {948, 3990}}";
+			sepNavSelRange = "{454, 1}";
+			sepNavVisRange = "{5816, 1674}";
 			sepNavWindowFrame = "{{462, 57}, {879, 714}}";
 		};
 	};
@@ -190,5 +196,33 @@
 			sepNavVisRange = "{0, 688}";
 			sepNavWindowFrame = "{{208, 75}, {879, 714}}";
 		};
+	};
+	CDBFAD420DBD3DF900A793A7 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
+	};
+	CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
+		name = "PBGNeuralNetwork.m: 12";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 1533;
+		vrLoc = 180;
+	};
+	CDBFAD480DBD3E1600A793A7 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
+	};
+	CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
+		name = "PBGNeuralNetwork.m: 20";
+		rLen = 1;
+		rLoc = 454;
+		rType = 0;
+		vrLen = 1674;
+		vrLoc = 5816;
 	};
 }

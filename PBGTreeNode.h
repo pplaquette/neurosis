@@ -17,6 +17,7 @@
 	NSImage				*nodeIcon;
 	PBGTreeNodeType		nodeType; // Folder, Special, lesson, etc
 	
+	int					index;
 	PBGLesson			*lesson;
 	
 	NSMutableArray		*children;
@@ -24,6 +25,7 @@
 	BOOL				isLeaf;
 }
 
+- (id)initWithNodeType:(PBGTreeNodeType)type nodeTitle:(NSString *)title andNodeIcon:(NSImage *)icon andIndex:(int)i;
 - (id)initWithNodeType:(PBGTreeNodeType)type nodeTitle:(NSString *)title andNodeIcon:(NSImage *)icon;
 
 - (void)setNodeTitle:(NSString *)newNodeTitle;
@@ -42,6 +44,8 @@
 - (NSMutableArray *)children;
 - (void)addChild:(PBGTreeNode *)n;
 - (PBGTreeNode *)childAtIndex:(int)i;
+
+- (NSArray *)expectedOutputsArray;
 
 - (NSComparisonResult)compare:(PBGTreeNode *)aNode;
 

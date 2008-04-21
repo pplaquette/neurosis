@@ -21,6 +21,8 @@
 	QTCaptureDecompressedVideoOutput	*mRawVideoOutput;
 	CVImageBufferRef                     mCurrentImageBuffer;
 	
+	CIImage								*lastFrame;
+	
 	float								contrast;
 	float								brightness;
 	double								resolution;
@@ -31,8 +33,11 @@
 }
 
 - (IBAction)takePicture:(id)sender;
+- (IBAction)recognize:(id)sender;
 
--(double)hElements;
--(double)vElements;
+- (CIImage *)grabFrame;
+
+- (double)hElements;
+- (double)vElements;
 
 @end
