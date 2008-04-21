@@ -15,6 +15,7 @@
 #define kFilePathIdentifier				@"PBGFilePathIdentifier"
 #define kResolutionIdentifier			@"PBGResolutionIdentifier"
 #define kImageAsArrayIdentifier			@"PBGImageAsArrayIdentifier"
+#define kRecognizeImageNotification		@"PBGRecognizeImageNotification"
 
 
 // PBGTreeNode Types

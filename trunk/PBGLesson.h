@@ -14,16 +14,16 @@
 	NSString		*imagePath;
 	NSArray			*imageAsArray;
 	NSImage			*image;
-	
 	NSString		*meaning;
 	
 }
 
-- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m;
+- (id)initWithImagePath:(NSString *)ip meaning:(NSString *)m index:(int)i;
 
 @property (assign) NSArray *imageAsArray;
 @property (assign) NSImage *image;
 @property (copy) NSString *meaning;
 
 - (void)addArrayRep:(NSArray *)a;
+- (NSArray *)expectedOutputsArray;
 @end

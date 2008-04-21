@@ -11,6 +11,7 @@
 
 @implementation PBGTreeNode
 
+
 - (id)initWithNodeType:(PBGTreeNodeType)type nodeTitle:(NSString *)title andNodeIcon:(NSImage *)icon;
 {
 	if (self = [super init])
@@ -19,7 +20,22 @@
 		nodeType = type;
 		if (icon) { nodeIcon = [icon retain]; }
 		isLeaf = YES;
-		
+		index = -1;
+		[self setChildren:[NSArray array]];
+	}
+	return self;
+}
+
+
+- (id)initWithNodeType:(PBGTreeNodeType)type nodeTitle:(NSString *)title andNodeIcon:(NSImage *)icon andIndex:(int)i;
+{
+	if (self = [super init])
+	{
+		nodeTitle = [title retain];
+		nodeType = type;
+		if (icon) { nodeIcon = [icon retain]; }
+		isLeaf = YES;
+		index = i;
 		[self setChildren:[NSArray array]];
 	}
 	return self;
@@ -230,6 +246,25 @@
 }
 
 */
+
+- (NSArray *)expectedOutputsArray
+{
+	NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
+	
+	int counter = index;
+	while (counter > 0) {
+		[array addObject:[NSNumber numberWithInt:(counter % 2)]];
+		counter = counter / 2;
+	}
+	
+	// Make sure we have a preceeding 0
+	if ([array count] < 2) {
+		[array addObject:[NSNumber numberWithInt:0]];
+		[array exchangeObjectAtIndex:0 withObjectAtIndex:1];
+	}
+	
+	return array;
+}
 
 - (BOOL)isLeaf
 {

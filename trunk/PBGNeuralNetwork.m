@@ -17,7 +17,7 @@
 	self = [super init];
 	if (self != nil) {
 		neuronCounter = 0;
-		learningRate = 0.01;
+		learningRate = 0.2;
 		srand( time(NULL) );
 		double high = 2.4 / inputCount;
 		double low = -2.4 / inputCount;

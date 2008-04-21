@@ -40,6 +40,8 @@
 	PBGNeuralNetwork			*network;
 	double						resolution;
 	
+	int							lessonCount;
+	
 	PBGSeparatorCell			*separatorCell;
 	
 	NSImage						*cameraIconImage;
@@ -53,6 +55,8 @@
 
 - (double)resolution;
 - (void)setResolution:(double)r;
+
+- (void)trainUntilSmartForLesson:(PBGTreeNode *)lesson;
 
 - (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex;
 
