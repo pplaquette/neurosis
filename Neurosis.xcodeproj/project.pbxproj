@@ -27,6 +27,7 @@
 		CDBD71280DABF35500653ACC /* PBGWeightedConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD71240DABF35500653ACC /* PBGWeightedConnection.m */; };
 		CDBD71290DABF35500653ACC /* PBGNeuralNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */; };
 		CDBD71A90DAC224600653ACC /* Lesson.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBD71A70DAC224600653ACC /* Lesson.xib */; };
+		CDBFAD560DBD42AA00A793A7 /* Brain.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDBFAD550DBD42AA00A793A7 /* Brain.icns */; };
 		CDF6B3E40DA2B956009F28C4 /* NeurosisController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		CDBD71250DABF35500653ACC /* PBGNeuralNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGNeuralNetwork.m; sourceTree = "<group>"; };
 		CDBD71260DABF35500653ACC /* PBGNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGNeuron.h; sourceTree = "<group>"; };
 		CDBD71A80DAC224600653ACC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Lesson.xib; sourceTree = "<group>"; };
+		CDBFAD550DBD42AA00A793A7 /* Brain.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Brain.icns; sourceTree = "<group>"; };
 		CDF6B3E20DA2B956009F28C4 /* NeurosisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeurosisController.h; sourceTree = "<group>"; };
 		CDF6B3E30DA2B956009F28C4 /* NeurosisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeurosisController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 		29B97314FDCFA39411CA2CEA /* Neurosis */ = {
 			isa = PBXGroup;
 			children = (
+				CDBFAD550DBD42AA00A793A7 /* Brain.icns */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -255,6 +258,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				CDBD6F6A0DA9482200653ACC /* Camera.xib in Resources */,
 				CDBD71A90DAC224600653ACC /* Lesson.xib in Resources */,
+				CDBFAD560DBD42AA00A793A7 /* Brain.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

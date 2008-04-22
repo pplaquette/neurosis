@@ -160,6 +160,26 @@
 	[network setStartingValues:values];
 	NSArray *outputs = [network computeOutputValues];
 	NSLog(@"Outputs were: %@", outputs);
+	
+	// Match outputs to one of our tree items.
+	int firstValue;
+	if ([[outputs objectAtIndex:0] doubleValue] < 0.4)
+		firstValue = 0;
+	else
+		firstValue = 1;
+	
+	int secondValue;
+	if ([[outputs objectAtIndex:1] doubleValue] < 0.4)
+		secondValue = 0;
+	else
+		secondValue = 1;
+	
+	int meaningLocation = (secondValue * 2) + (firstValue);
+
+	PBGTreeNode *meaningNode = [[[contents objectAtIndex:1] children] objectAtIndex:meaningLocation];
+	
+	[cameraController setRecognizedString:[[NSString stringWithString:@"I recognize a "] stringByAppendingString:[meaningNode nodeTitle]]];
+	
 	[image release];
 	[values release];
 }
@@ -221,6 +241,7 @@
 
 - (void)trainUntilSmart
 {
+	NSLog(@"Training");
 	NSMutableArray *education = (NSMutableArray *) [[contents objectAtIndex:1] children];
 	double sumSquaredError = 1;
 	
@@ -247,29 +268,6 @@
 			}
 		}
 		sumSquaredError = error;
-	}
-}
-- (void)trainUntilSmartForLesson:(PBGTreeNode *)lessonFolder
-{
-	double sumSquaredError = 100;
-	
-	double out1, out2;
-	NSArray *expectOuts = [lessonFolder expectedOutputsArray];
-	
-	PBGTreeNode *node = [lessonFolder childAtIndex:0];
-	
-	PBGLesson *lesson = [node lesson];
-	[network setStartingValues:lesson.imageAsArray];
-	
-	while (sumSquaredError > 0.1) {
-			NSLog(@"Testing: %f", sumSquaredError);
-			
-			[network learnFromExpectedOutputs:expectOuts];
-			out1 = [[[network computeOutputValues] objectAtIndex:0] doubleValue];
-			out1 = [[expectOuts objectAtIndex:0] intValue] - out1;
-			out2 = [[[network computeOutputValues] objectAtIndex:1] doubleValue];
-			out2 = [[expectOuts objectAtIndex:1] intValue] - out2;
-			sumSquaredError = pow(out1, 2) + pow(out2, 2);
 	}
 }
 

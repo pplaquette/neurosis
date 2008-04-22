@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>CDBFAD4D0DBD3E3300A793A7</string>
+						<string>CDBFAD500DBD408B00A793A7</string>
 						<key>history</key>
 						<array>
 							<string>CDBFAD480DBD3E1600A793A7</string>
@@ -556,7 +556,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CDBFAD450DBD3E0100A793A7</string>
 		<string>/Users/patrick/Desktop/neurosis/NNTest/NNTest.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

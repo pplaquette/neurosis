@@ -56,7 +56,7 @@
 - (double)resolution;
 - (void)setResolution:(double)r;
 
-- (void)trainUntilSmartForLesson:(PBGTreeNode *)lesson;
+- (void)trainUntilSmart;
 
 - (void)addNode:(PBGTreeNode *)newNode atIndex:(NSNumber *)givenIndex;
 

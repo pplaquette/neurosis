@@ -75,14 +75,25 @@
 	
 }
 
--(double)hElements
+- (double)hElements
 {
 	return hElements;
 }
 
--(double)vElements
+- (double)vElements
 {
 	return vElements;
+}
+
+- (NSString *)recognizedString;
+{
+	return recognizedString;
+}
+
+- (void)setRecognizedString:(NSString *)s
+{
+	[recognizedString release];
+	recognizedString = [s retain];
 }
 
 - (void)updateResolution:(NSNotification *)note
