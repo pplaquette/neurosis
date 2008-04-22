@@ -251,17 +251,19 @@
 {
 	NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
 	
-	int counter = index;
-	while (counter > 0) {
+	int counter = (index - 1);
+	do {
 		[array addObject:[NSNumber numberWithInt:(counter % 2)]];
 		counter = counter / 2;
-	}
+	} while (counter > 0);
 	
 	// Make sure we have a preceeding 0
 	if ([array count] < 2) {
 		[array addObject:[NSNumber numberWithInt:0]];
 		[array exchangeObjectAtIndex:0 withObjectAtIndex:1];
 	}
+	
+	//NSLog(@"Expected outputs array for %@: %@", self, array);
 	
 	return array;
 }

@@ -16,6 +16,9 @@
 	IBOutlet QTCaptureView				*mCaptureView;
 	IBOutlet NSTextField				*imageOfString;
 	
+	IBOutlet NSTextField				*recognizedTextField;
+	NSString							*recognizedString;
+	
 	QTCaptureDeviceInput				*mCaptureDeviceInput; 
 	QTCaptureSession					*mCaptureSession;
 	QTCaptureDecompressedVideoOutput	*mRawVideoOutput;
@@ -36,6 +39,9 @@
 - (IBAction)recognize:(id)sender;
 
 - (CIImage *)grabFrame;
+
+- (void)setRecognizedString:(NSString *)s;
+- (NSString *)recognizedString;
 
 - (double)hElements;
 - (double)vElements;

@@ -87,10 +87,8 @@
 			PBXWorkspaceStateSaveDate = 230505974;
 		};
 		perUserProjectItems = {
-			CDBFAD420DBD3DF900A793A7 /* PBXBookmark */ = CDBFAD420DBD3DF900A793A7 /* PBXBookmark */;
-			CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */ = CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */;
 			CDBFAD480DBD3E1600A793A7 /* PBXBookmark */ = CDBFAD480DBD3E1600A793A7 /* PBXBookmark */;
-			CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */ = CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */;
+			CDBFAD500DBD408B00A793A7 /* PBXTextBookmark */ = CDBFAD500DBD408B00A793A7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CDBFA90F0DBA9ED300A793A7 /* Source Control */;
 		userBuildSettings = {
@@ -197,25 +195,11 @@
 			sepNavWindowFrame = "{{208, 75}, {879, 714}}";
 		};
 	};
-	CDBFAD420DBD3DF900A793A7 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
-	};
-	CDBFAD470DBD3E0100A793A7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
-		name = "PBGNeuralNetwork.m: 12";
-		rLen = 0;
-		rLoc = 236;
-		rType = 0;
-		vrLen = 1533;
-		vrLoc = 180;
-	};
 	CDBFAD480DBD3E1600A793A7 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
 	};
-	CDBFAD4D0DBD3E3300A793A7 /* PBXTextBookmark */ = {
+	CDBFAD500DBD408B00A793A7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CDBFA9110DBA9EEB00A793A7 /* PBGNeuralNetwork.m */;
 		name = "PBGNeuralNetwork.m: 20";
