@@ -1,0 +1,1 @@
+This started as an undergraduate research project and developed into a work-in-progress artificial neural network implementation done in Cocoa / Objective-C, complete with wrapper application that uses Core Image and your built-in iSight camera to learn and recognize simple shapes.
